@@ -1,5 +1,5 @@
 site_name: Mkdocs for Intelligent Textbooks
-repo_url: https://github.com/dmccreary/i-book-v1
+repo_url: https://github.com/ArtemisPearson/learning-graphs
 nav:
   - Home: index.md
   - List of Chapters:
