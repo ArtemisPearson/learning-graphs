@@ -1613,8 +1613,8 @@
 </details>
 <h3 id="basic-structure">Basic Structure</h3>
 <ol>
-<li>Start with an initial guess <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{x}^{(0)} </span><script type="math/tex"> \mathbf{x}^{(0)} </script></span>.</li>
-<li>Apply an update rule to get better approximations <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{x}^{(1)}, \mathbf{x}^{(2)}, \dots </span><script type="math/tex"> \mathbf{x}^{(1)}, \mathbf{x}^{(2)}, \dots </script></span>.</li>
+<li>Start with an initial guess <span class="arithmatex">\( \mathbf{x}^{(0)} \)</span>.</li>
+<li>Apply an update rule to get better approximations <span class="arithmatex">\( \mathbf{x}^{(1)}, \mathbf{x}^{(2)}, \dots \)</span>.</li>
 <li>Stop when changes become sufficiently small.</li>
 </ol>
 <hr />
@@ -1648,14 +1648,14 @@ $$</p>
 <h3 id="how-and-why_1">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Much faster and memory-efficient for large sparse systems arising in physics simulations, machine learning, and more.</li>
-<li><strong>How?</strong> CG searches along conjugate directions to minimize the quadratic form associated with <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</li>
+<li><strong>How?</strong> CG searches along conjugate directions to minimize the quadratic form associated with <span class="arithmatex">\(A\)</span>.</li>
 </ul>
 <p><strong>Key Features:</strong>
 - Only needs matrix-vector multiplications.
 - Requires fewer iterations for convergence.</p>
 <details class="example" open="open">
 <summary>When to Use CG</summary>
-<p>Solving <span class="arithmatex"><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span> where <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> comes from discretizing a 2D Poisson equation—a common physics simulation problem.</p>
+<p>Solving <span class="arithmatex">\(Ax = b\)</span> where <span class="arithmatex">\(A\)</span> comes from discretizing a 2D Poisson equation—a common physics simulation problem.</p>
 </details>
 <hr />
 <h2 id="84-matrix-norms">8.4 Matrix Norms</h2>
@@ -1665,9 +1665,9 @@ $$</p>
 <ul>
 <li><strong>Why?</strong> Helps quantify error and convergence behavior in iterative methods.</li>
 <li><strong>How?</strong> Different norms exist:</li>
-<li><strong><span class="arithmatex"><span class="MathJax_Preview"> \|A\|_1 </span><script type="math/tex"> \|A\|_1 </script></span></strong>: maximum absolute column sum.</li>
-<li><strong><span class="arithmatex"><span class="MathJax_Preview"> \|A\|_\infty </span><script type="math/tex"> \|A\|_\infty </script></span></strong>: maximum absolute row sum.</li>
-<li><strong><span class="arithmatex"><span class="MathJax_Preview"> \|A\|_2 </span><script type="math/tex"> \|A\|_2 </script></span></strong>: largest singular value (spectral norm).</li>
+<li><strong><span class="arithmatex">\( \|A\|_1 \)</span></strong>: maximum absolute column sum.</li>
+<li><strong><span class="arithmatex">\( \|A\|_\infty \)</span></strong>: maximum absolute row sum.</li>
+<li><strong><span class="arithmatex">\( \|A\|_2 \)</span></strong>: largest singular value (spectral norm).</li>
 </ul>
 <details class="tip">
 <summary>Tip</summary>
@@ -1676,7 +1676,7 @@ $$</p>
 <hr />
 <h2 id="85-condition-number">8.5 Condition Number</h2>
 <h3 id="concept_3">Concept</h3>
-<p>The <strong>condition number</strong> measures how sensitive the solution <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{x} </span><script type="math/tex"> \mathbf{x} </script></span> is to small changes in <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> or <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} </span><script type="math/tex"> \mathbf{b} </script></span>.</p>
+<p>The <strong>condition number</strong> measures how sensitive the solution <span class="arithmatex">\( \mathbf{x} \)</span> is to small changes in <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\( \mathbf{b} \)</span>.</p>
 <h3 id="how-and-why_3">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Predicts if small input errors will cause large output errors.</li>
@@ -1687,12 +1687,12 @@ $$
 \kappa(A) = |A| \cdot |A^{-1}|
 $$</p>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview"> \kappa(A) \approx 1 </span><script type="math/tex"> \kappa(A) \approx 1 </script></span>: well-conditioned (small errors remain small).</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> \kappa(A) \gg 1 </span><script type="math/tex"> \kappa(A) \gg 1 </script></span>: ill-conditioned (small errors get amplified).</li>
+<li><span class="arithmatex">\( \kappa(A) \approx 1 \)</span>: well-conditioned (small errors remain small).</li>
+<li><span class="arithmatex">\( \kappa(A) \gg 1 \)</span>: ill-conditioned (small errors get amplified).</li>
 </ul>
 <details class="warning">
 <summary>Important</summary>
-<p>Large condition numbers make solving <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x} = \mathbf{b}</span><script type="math/tex">A\mathbf{x} = \mathbf{b}</script></span> <strong>numerically risky</strong>, even if <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is invertible theoretically!</p>
+<p>Large condition numbers make solving <span class="arithmatex">\(A\mathbf{x} = \mathbf{b}\)</span> <strong>numerically risky</strong>, even if <span class="arithmatex">\(A\)</span> is invertible theoretically!</p>
 </details>
 <hr />
 <h2 id="86-stability-and-error-analysis">8.6 Stability and Error Analysis</h2>
@@ -1708,7 +1708,7 @@ $$</p>
 <h3 id="forward-vs-backward-error">Forward vs. Backward Error</h3>
 <ul>
 <li><strong>Forward error</strong>: Difference between true solution and computed solution.</li>
-<li><strong>Backward error</strong>: How much we have to perturb <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> or <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} </span><script type="math/tex"> \mathbf{b} </script></span> to make the computed solution exact.</li>
+<li><strong>Backward error</strong>: How much we have to perturb <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\( \mathbf{b} \)</span> to make the computed solution exact.</li>
 </ul>
 <details class="example">
 <summary>Example</summary>
@@ -1726,7 +1726,7 @@ $$</p>
 </ul>
 <hr />
 <h1 id="quiz">📝 Quiz</h1>
-<p>If a matrix has a large condition number, what does it imply about solving <span class="arithmatex"><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span>?</p>
+<p>If a matrix has a large condition number, what does it imply about solving <span class="arithmatex">\(Ax = b\)</span>?</p>
 <div class="upper-alpha">
 <p>A. The matrix is singular.<br />
 B. Small input errors can cause large output errors.<br />
@@ -1787,6 +1787,12 @@ D. Gaussian elimination will fail completely.</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -1552,24 +1552,19 @@
 </blockquote>
 <p>Instead of looking at how a signal behaves over time, we want to look at its <strong>frequency content</strong>.</p>
 <h3 id="how-does-the-fourier-matrix-work">How Does the Fourier Matrix Work?</h3>
-<p>The <strong>Discrete Fourier Transform (DFT)</strong> can be represented as multiplication by a special matrix, called the <strong>Fourier Matrix</strong> <span class="arithmatex"><span class="MathJax_Preview">F_n</span><script type="math/tex">F_n</script></span> of size <span class="arithmatex"><span class="MathJax_Preview">n \times n</span><script type="math/tex">n \times n</script></span>.</p>
-<p>Each entry of <span class="arithmatex"><span class="MathJax_Preview">F_n</span><script type="math/tex">F_n</script></span> is:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>The <strong>Discrete Fourier Transform (DFT)</strong> can be represented as multiplication by a special matrix, called the <strong>Fourier Matrix</strong> <span class="arithmatex">\(F_n\)</span> of size <span class="arithmatex">\(n \times n\)</span>.</p>
+<p>Each entry of <span class="arithmatex">\(F_n\)</span> is:</p>
+<div class="arithmatex">\[
 (F_n)_{jk} = \omega_n^{jk} \quad \text{where} \quad \omega_n = e^{-2\pi i/n}
-</div>
-<script type="math/tex; mode=display">
-(F_n)_{jk} = \omega_n^{jk} \quad \text{where} \quad \omega_n = e^{-2\pi i/n}
-</script>
-</div>
-<p>Here, <span class="arithmatex"><span class="MathJax_Preview">\omega_n</span><script type="math/tex">\omega_n</script></span> is a "primitive root of unity," a complex number representing one full circle of rotation split into <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> parts.</p>
+\]</div>
+<p>Here, <span class="arithmatex">\(\omega_n\)</span> is a "primitive root of unity," a complex number representing one full circle of rotation split into <span class="arithmatex">\(n\)</span> parts.</p>
 <h4 id="intuitive-explanation">Intuitive Explanation</h4>
-<p>Think of <span class="arithmatex"><span class="MathJax_Preview">\omega_n</span><script type="math/tex">\omega_n</script></span> as a tiny clock hand. Multiplying by powers of <span class="arithmatex"><span class="MathJax_Preview">\omega_n</span><script type="math/tex">\omega_n</script></span> spins vectors around the complex plane. The DFT sums these spins in a way that identifies the signal's dominant frequencies.</p>
+<p>Think of <span class="arithmatex">\(\omega_n\)</span> as a tiny clock hand. Multiplying by powers of <span class="arithmatex">\(\omega_n\)</span> spins vectors around the complex plane. The DFT sums these spins in a way that identifies the signal's dominant frequencies.</p>
 <h4 id="key-properties-of-the-fourier-matrix">Key Properties of the Fourier Matrix:</h4>
 <ul>
-<li><strong>Unitary</strong>: <span class="arithmatex"><span class="MathJax_Preview">F_n^* F_n = nI</span><script type="math/tex">F_n^* F_n = nI</script></span> (where <span class="arithmatex"><span class="MathJax_Preview">F_n^*</span><script type="math/tex">F_n^*</script></span> is the conjugate transpose)</li>
-<li><strong>Invertible</strong>: You can recover the original signal by applying <span class="arithmatex"><span class="MathJax_Preview">F_n^{-1}</span><script type="math/tex">F_n^{-1}</script></span>.</li>
-<li><strong>Efficient</strong>: Although <span class="arithmatex"><span class="MathJax_Preview">F_n</span><script type="math/tex">F_n</script></span> is dense, its structure enables fast computation.</li>
+<li><strong>Unitary</strong>: <span class="arithmatex">\(F_n^* F_n = nI\)</span> (where <span class="arithmatex">\(F_n^*\)</span> is the conjugate transpose)</li>
+<li><strong>Invertible</strong>: You can recover the original signal by applying <span class="arithmatex">\(F_n^{-1}\)</span>.</li>
+<li><strong>Efficient</strong>: Although <span class="arithmatex">\(F_n\)</span> is dense, its structure enables fast computation.</li>
 </ul>
 <h3 id="example">Example</h3>
 <p>Given a simple signal:
@@ -1583,15 +1578,10 @@ Applying the Fourier matrix transforms it into frequency components. The result 
 <p>While the Fourier Transform uses <strong>complex numbers</strong> (sines and cosines together), the <strong>Discrete Cosine Transform</strong> focuses only on <strong>cosine</strong> terms — making it entirely <strong>real-valued</strong> and often more efficient for practical applications.</p>
 <p>DCT is particularly important for <strong>compression</strong>, like how JPEG images reduce file size without losing visible quality.</p>
 <h3 id="how-does-the-dct-matrix-work">How Does the DCT Matrix Work?</h3>
-<p>The DCT transformation can also be seen as multiplication by a special matrix <span class="arithmatex"><span class="MathJax_Preview">C_n</span><script type="math/tex">C_n</script></span>, where each element is a cosine of equally spaced angles.</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>The DCT transformation can also be seen as multiplication by a special matrix <span class="arithmatex">\(C_n\)</span>, where each element is a cosine of equally spaced angles.</p>
+<div class="arithmatex">\[
 (C_n)_{jk} = \cos\left( \frac{\pi}{n} \left(j + \frac{1}{2}\right)k \right)
-</div>
-<script type="math/tex; mode=display">
-(C_n)_{jk} = \cos\left( \frac{\pi}{n} \left(j + \frac{1}{2}\right)k \right)
-</script>
-</div>
+\]</div>
 <p>This formula ensures orthogonality (no redundant information) and compresses most energy into fewer components.</p>
 <h4 id="intuitive-explanation_1">Intuitive Explanation</h4>
 <p>Imagine drawing a signal as a squiggly line. The DCT breaks this line into a combination of "smooth hills" (cosine curves) — <strong>the fewer hills needed, the better the compression</strong>.</p>
@@ -1603,7 +1593,7 @@ Applying the Fourier matrix transforms it into frequency components. The result 
 <hr />
 <h2 id="143-fast-fourier-transform-fft">14.3 Fast Fourier Transform (FFT)</h2>
 <h3 id="why-do-we-need-fft">Why Do We Need FFT?</h3>
-<p>Directly multiplying a vector by <span class="arithmatex"><span class="MathJax_Preview">F_n</span><script type="math/tex">F_n</script></span> takes <span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span> operations, which becomes too slow for large <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>. The <strong>Fast Fourier Transform (FFT)</strong> cleverly reduces this to <span class="arithmatex"><span class="MathJax_Preview">O(n \log n)</span><script type="math/tex">O(n \log n)</script></span> by <strong>exploiting the symmetry</strong> of the Fourier matrix.</p>
+<p>Directly multiplying a vector by <span class="arithmatex">\(F_n\)</span> takes <span class="arithmatex">\(O(n^2)\)</span> operations, which becomes too slow for large <span class="arithmatex">\(n\)</span>. The <strong>Fast Fourier Transform (FFT)</strong> cleverly reduces this to <span class="arithmatex">\(O(n \log n)\)</span> by <strong>exploiting the symmetry</strong> of the Fourier matrix.</p>
 <h3 id="how-fft-works">How FFT Works</h3>
 <p>The idea behind FFT is <strong>divide and conquer</strong>:
 - Break the signal into even and odd parts.
@@ -1618,7 +1608,7 @@ Applying the Fourier matrix transforms it into frequency components. The result 
 <p>In earlier chapters, you learned about:
 - <strong>Linear transformations</strong>: Matrix actions on vectors.
 - <strong>Eigenvalues and eigenvectors</strong>: Special vectors that reveal intrinsic properties of transformations.</p>
-<p>Here, the DFT and DCT <strong>are special types of linear transformations</strong> — and the matrices <span class="arithmatex"><span class="MathJax_Preview">F_n</span><script type="math/tex">F_n</script></span> and <span class="arithmatex"><span class="MathJax_Preview">C_n</span><script type="math/tex">C_n</script></span> have eigenproperties that make them extremely useful for diagonalizing convolution operators (used heavily in signal processing).</p>
+<p>Here, the DFT and DCT <strong>are special types of linear transformations</strong> — and the matrices <span class="arithmatex">\(F_n\)</span> and <span class="arithmatex">\(C_n\)</span> have eigenproperties that make them extremely useful for diagonalizing convolution operators (used heavily in signal processing).</p>
 <p>Understanding <strong>how signals decompose into simpler parts</strong> echoes the ideas of <strong>basis change</strong> and <strong>projection</strong> you learned earlier.</p>
 <hr />
 <h1 id="quiz">✏️ Quiz</h1>
@@ -1693,6 +1683,12 @@ D. Increasing signal frequency  </p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

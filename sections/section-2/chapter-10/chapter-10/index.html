@@ -1596,38 +1596,28 @@
 <h3 id="hermitian-matrices">Hermitian Matrices</h3>
 <h3 id="concept">Concept</h3>
 <p>A <strong>Hermitian matrix</strong> satisfies:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 A = A^*
-</div>
-<script type="math/tex; mode=display">
-A = A^*
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">A^*</span><script type="math/tex">A^*</script></span> is the conjugate transpose.</p>
+\]</div>
+<p>where <span class="arithmatex">\(A^*\)</span> is the conjugate transpose.</p>
 <ul>
-<li>For real matrices, Hermitian reduces to <strong>symmetric</strong> matrices <span class="arithmatex"><span class="MathJax_Preview">(A = A^T)</span><script type="math/tex">(A = A^T)</script></span>.</li>
+<li>For real matrices, Hermitian reduces to <strong>symmetric</strong> matrices <span class="arithmatex">\((A = A^T)\)</span>.</li>
 </ul>
 <h3 id="how-and-why">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Hermitian matrices have <strong>real eigenvalues</strong> and <strong>orthogonal eigenvectors</strong>—making them extremely stable in computations.</li>
-<li><strong>How?</strong> Check if each entry satisfies <span class="arithmatex"><span class="MathJax_Preview">a_{ij} = \overline{a_{ji}}</span><script type="math/tex">a_{ij} = \overline{a_{ji}}</script></span>.</li>
+<li><strong>How?</strong> Check if each entry satisfies <span class="arithmatex">\(a_{ij} = \overline{a_{ji}}\)</span>.</li>
 </ul>
 <details class="example">
 <summary>Example</summary>
-<p>The matrix <span class="arithmatex"><span class="MathJax_Preview">\begin{bmatrix}2 &amp; i \\ -i &amp; 3\end{bmatrix}</span><script type="math/tex">\begin{bmatrix}2 & i \\ -i & 3\end{bmatrix}</script></span> is Hermitian.</p>
+<p>The matrix <span class="arithmatex">\(\begin{bmatrix}2 &amp; i \\ -i &amp; 3\end{bmatrix}\)</span> is Hermitian.</p>
 </details>
 <h3 id="unitary-matrices">Unitary Matrices</h3>
 <h3 id="concept_1">Concept</h3>
 <p>A <strong>unitary matrix</strong> satisfies:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 U^*U = I
-</div>
-<script type="math/tex; mode=display">
-U^*U = I
-</script>
-</div>
+\]</div>
 <p>meaning its conjugate transpose is also its inverse.</p>
 <h3 id="how-and-why_1">How and Why</h3>
 <ul>
@@ -1636,20 +1626,15 @@ U^*U = I
 </ul>
 <details class="tip">
 <summary>Real Analogy</summary>
-<p>In the real case, unitary matrices are just <strong>orthogonal matrices</strong> <span class="arithmatex"><span class="MathJax_Preview">(Q^T Q = I)</span><script type="math/tex">(Q^T Q = I)</script></span>.</p>
+<p>In the real case, unitary matrices are just <strong>orthogonal matrices</strong> <span class="arithmatex">\((Q^T Q = I)\)</span>.</p>
 </details>
 <h3 id="positive-definite-matrices">Positive Definite Matrices</h3>
 <h3 id="concept_2">Concept</h3>
-<p>A matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is <strong>positive definite</strong> if:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>A matrix <span class="arithmatex">\(A\)</span> is <strong>positive definite</strong> if:</p>
+<div class="arithmatex">\[
 \mathbf{x}^T A \mathbf{x} &gt; 0
-</div>
-<script type="math/tex; mode=display">
-\mathbf{x}^T A \mathbf{x} > 0
-</script>
-</div>
-<p>for all nonzero vectors <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>.</p>
+\]</div>
+<p>for all nonzero vectors <span class="arithmatex">\(\mathbf{x}\)</span>.</p>
 <h3 id="how-and-why_2">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Positive definite matrices ensure <strong>unique solutions</strong> and <strong>nice behavior</strong> in optimization and numerical methods.</li>
@@ -1689,7 +1674,7 @@ U^*U = I
 <li><strong>How?</strong> Matrix multiplication and inversion rules extend naturally to block structure.</li>
 </ul>
 <p><strong>Example:</strong>
-If <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> and <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> are block matrices:</p>
+If <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are block matrices:</p>
 <p>$$
 C = \begin{bmatrix} A &amp; B \ 0 &amp; D \end{bmatrix}
 $$
@@ -1701,30 +1686,22 @@ then the inverse can be computed block-wise!</p>
 <hr />
 <h2 id="104-kronecker-product">10.4 Kronecker Product</h2>
 <h3 id="concept_5">Concept</h3>
-<p>The <strong>Kronecker product</strong> <span class="arithmatex"><span class="MathJax_Preview">A \otimes B</span><script type="math/tex">A \otimes B</script></span> creates a larger matrix from two smaller ones, spreading <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>'s entries across copies of <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>.</p>
+<p>The <strong>Kronecker product</strong> <span class="arithmatex">\(A \otimes B\)</span> creates a larger matrix from two smaller ones, spreading <span class="arithmatex">\(A\)</span>'s entries across copies of <span class="arithmatex">\(B\)</span>.</p>
 <h3 id="how-and-why_5">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Useful in systems modeling, tensor algebra, and quantum computing.</li>
 <li><strong>How?</strong></li>
 </ul>
-<p>If <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is <span class="arithmatex"><span class="MathJax_Preview">2 \times 2</span><script type="math/tex">2 \times 2</script></span> and <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> is <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span>, then <span class="arithmatex"><span class="MathJax_Preview">A \otimes B</span><script type="math/tex">A \otimes B</script></span> is <span class="arithmatex"><span class="MathJax_Preview">6 \times 6</span><script type="math/tex">6 \times 6</script></span>.</p>
+<p>If <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(2 \times 2\)</span> and <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(3 \times 3\)</span>, then <span class="arithmatex">\(A \otimes B\)</span> is <span class="arithmatex">\(6 \times 6\)</span>.</p>
 <details class="example" open="open">
 <summary>Concrete Example</summary>
-<p>If <span class="arithmatex"><span class="MathJax_Preview">A = \begin{bmatrix}1 &amp; 2\\ 3 &amp; 4\end{bmatrix}</span><script type="math/tex">A = \begin{bmatrix}1 & 2\\ 3 & 4\end{bmatrix}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> is a 3x3 matrix, then:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>If <span class="arithmatex">\(A = \begin{bmatrix}1 &amp; 2\\ 3 &amp; 4\end{bmatrix}\)</span> and <span class="arithmatex">\(B\)</span> is a 3x3 matrix, then:</p>
+<div class="arithmatex">\[
 A \otimes B = \begin{bmatrix}
 1B &amp; 2B \\
 3B &amp; 4B
 \end{bmatrix}
-</div>
-<script type="math/tex; mode=display">
-A \otimes B = \begin{bmatrix}
-1B & 2B \\
-3B & 4B
-\end{bmatrix}
-</script>
-</div>
+\]</div>
 </details>
 <h3 id="applications">Applications</h3>
 <ul>
@@ -1742,7 +1719,7 @@ A \otimes B = \begin{bmatrix}
 <p>Recognizing these structures is critical for designing fast and scalable scientific computations.</p>
 <hr />
 <h1 id="quiz">📝 Quiz</h1>
-<p>Which type of matrix satisfies <span class="arithmatex"><span class="MathJax_Preview">A^* = A</span><script type="math/tex">A^* = A</script></span> where <span class="arithmatex"><span class="MathJax_Preview">A^*</span><script type="math/tex">A^*</script></span> denotes the conjugate transpose?</p>
+<p>Which type of matrix satisfies <span class="arithmatex">\(A^* = A\)</span> where <span class="arithmatex">\(A^*\)</span> denotes the conjugate transpose?</p>
 <div class="upper-alpha">
 <p>A. Unitary matrix<br />
 B. Positive definite matrix<br />
@@ -1751,7 +1728,7 @@ D. Symmetric matrix</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>C</strong>. <strong>Hermitian matrices</strong> satisfy <span class="arithmatex"><span class="MathJax_Preview">A^* = A</span><script type="math/tex">A^* = A</script></span>. For real matrices, Hermitian simply means symmetric <span class="arithmatex"><span class="MathJax_Preview">(A^T = A)</span><script type="math/tex">(A^T = A)</script></span>.</p>
+<p>The correct answer is <strong>C</strong>. <strong>Hermitian matrices</strong> satisfy <span class="arithmatex">\(A^* = A\)</span>. For real matrices, Hermitian simply means symmetric <span class="arithmatex">\((A^T = A)\)</span>.</p>
 </details>
 
 
@@ -1803,6 +1780,12 @@ D. Symmetric matrix</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

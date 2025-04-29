@@ -1495,10 +1495,10 @@
 <hr />
 <h2 id="151-adjacency-and-incidence-matrices">15.1 Adjacency and Incidence Matrices</h2>
 <h3 id="adjacency-matrix">Adjacency Matrix</h3>
-<p>An <strong>adjacency matrix</strong> <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> for a graph with <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> nodes is an <span class="arithmatex"><span class="MathJax_Preview">n \times n</span><script type="math/tex">n \times n</script></span> matrix where:
-- <span class="arithmatex"><span class="MathJax_Preview">A_{ij} = 1</span><script type="math/tex">A_{ij} = 1</script></span> if there is an edge from node <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> to node <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>,
-- <span class="arithmatex"><span class="MathJax_Preview">A_{ij} = 0</span><script type="math/tex">A_{ij} = 0</script></span> otherwise.</p>
-<p>If the graph is <strong>undirected</strong>, <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is symmetric.</p>
+<p>An <strong>adjacency matrix</strong> <span class="arithmatex">\(A\)</span> for a graph with <span class="arithmatex">\(n\)</span> nodes is an <span class="arithmatex">\(n \times n\)</span> matrix where:
+- <span class="arithmatex">\(A_{ij} = 1\)</span> if there is an edge from node <span class="arithmatex">\(i\)</span> to node <span class="arithmatex">\(j\)</span>,
+- <span class="arithmatex">\(A_{ij} = 0\)</span> otherwise.</p>
+<p>If the graph is <strong>undirected</strong>, <span class="arithmatex">\(A\)</span> is symmetric.</p>
 <h4 id="example">Example</h4>
 <p>A simple graph:</p>
 <pre><code>1 --- 2
@@ -1507,22 +1507,22 @@
 </code></pre>
 <p>Adjacency matrix:
 $$
-A = \begin{bmatrix}0 &amp; 1 &amp; 1 &amp; 0 \ 1 &amp; 0 &amp; 0 &amp; 1 \ 1 &amp; 0 &amp; 0 &amp; 1 \ 0 &amp; 1 &amp; 1 &amp; 0\end{bmatrix}
+A = \begin{bmatrix}0 &amp; 1 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 1 \\ 1 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 1 &amp; 1 &amp; 0\end{bmatrix}
 $$</p>
 <h3 id="incidence-matrix">Incidence Matrix</h3>
-<p>An <strong>incidence matrix</strong> <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> for a graph with <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> nodes and <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> edges is an <span class="arithmatex"><span class="MathJax_Preview">n \times m</span><script type="math/tex">n \times m</script></span> matrix where:
+<p>An <strong>incidence matrix</strong> <span class="arithmatex">\(B\)</span> for a graph with <span class="arithmatex">\(n\)</span> nodes and <span class="arithmatex">\(m\)</span> edges is an <span class="arithmatex">\(n \times m\)</span> matrix where:
 - Each column represents an edge.
-- Entries are <span class="arithmatex"><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>, <span class="arithmatex"><span class="MathJax_Preview">-1</span><script type="math/tex">-1</script></span>, or <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>, depending on whether a node is the start or end of the edge (for directed graphs).</p>
+- Entries are <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(-1\)</span>, or <span class="arithmatex">\(0\)</span>, depending on whether a node is the start or end of the edge (for directed graphs).</p>
 <hr />
 <h2 id="152-graph-laplacians-and-their-properties">15.2 Graph Laplacians and Their Properties</h2>
 <h3 id="definition">Definition</h3>
-<p>The <strong>graph Laplacian</strong> <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is defined as:
+<p>The <strong>graph Laplacian</strong> <span class="arithmatex">\(L\)</span> is defined as:
 $$
 L = D - A
 $$
 where:
-- <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> is the degree matrix (diagonal, with node degrees),
-- <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is the adjacency matrix.</p>
+- <span class="arithmatex">\(D\)</span> is the degree matrix (diagonal, with node degrees),
+- <span class="arithmatex">\(A\)</span> is the adjacency matrix.</p>
 <h3 id="why-the-laplacian">Why the Laplacian?</h3>
 <ul>
 <li>It captures both <strong>local</strong> (neighbor) and <strong>global</strong> (whole graph) structure.</li>
@@ -1530,7 +1530,7 @@ where:
 </ul>
 <h4 id="key-properties">Key Properties:</h4>
 <ul>
-<li>The smallest eigenvalue is always <span class="arithmatex"><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span>.</li>
+<li>The smallest eigenvalue is always <span class="arithmatex">\(0\)</span>.</li>
 <li>The number of zero eigenvalues = the number of connected components.</li>
 </ul>
 <hr />
@@ -1539,7 +1539,7 @@ where:
 <p>Spectral clustering uses the <strong>eigenvectors</strong> of the Laplacian matrix to group nodes into clusters.</p>
 <h3 id="how-it-works">How It Works</h3>
 <ol>
-<li>Compute the Laplacian matrix <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>.</li>
+<li>Compute the Laplacian matrix <span class="arithmatex">\(L\)</span>.</li>
 <li>Find the eigenvectors corresponding to the smallest nonzero eigenvalues.</li>
 <li>Treat rows of these eigenvectors as new coordinates.</li>
 <li>Apply a simple clustering algorithm (like k-means) in this new space.</li>
@@ -1627,6 +1627,12 @@ D. Degree matrix  </p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

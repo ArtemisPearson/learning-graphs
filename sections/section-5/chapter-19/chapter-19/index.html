@@ -1479,42 +1479,27 @@
 <h2 id="2-the-hessian-matrix">2. The Hessian Matrix</h2>
 <h3 id="what-is-the-hessian">What is the Hessian?</h3>
 <p>The <strong>Hessian matrix</strong> captures second-order derivatives of a scalar function with respect to multiple variables.</p>
-<p>For a function <span class="arithmatex"><span class="MathJax_Preview">f(x_1, x_2, \dots, x_n)</span><script type="math/tex">f(x_1, x_2, \dots, x_n)</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>For a function <span class="arithmatex">\(f(x_1, x_2, \dots, x_n)\)</span>:</p>
+<div class="arithmatex">\[
 H = \begin{bmatrix}
 \frac{\partial^2 f}{\partial x_1^2} &amp; \frac{\partial^2 f}{\partial x_1 \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
 \frac{\partial^2 f}{\partial x_2 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_2^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 \frac{\partial^2 f}{\partial x_n \partial x_1} &amp; \frac{\partial^2 f}{\partial x_n \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_n^2}
 \end{bmatrix}
-</div>
-<script type="math/tex; mode=display">
-H = \begin{bmatrix}
-\frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
-\frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2} & \cdots & \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
-\vdots & \vdots & \ddots & \vdots \\
-\frac{\partial^2 f}{\partial x_n \partial x_1} & \frac{\partial^2 f}{\partial x_n \partial x_2} & \cdots & \frac{\partial^2 f}{\partial x_n^2}
-\end{bmatrix}
-</script>
-</div>
+\]</div>
 <p><strong>Key Properties:</strong>
 - Symmetric (if the function is smooth)
 - Describes local curvature</p>
 <h2 id="3-newtons-method-with-matrices">3. Newton's Method with Matrices</h2>
 <h3 id="how-it-works">How It Works</h3>
 <p>Newton’s update formula:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \theta_{\text{new}} = \theta - H^{-1} \nabla f(\theta)
-</div>
-<script type="math/tex; mode=display">
-\theta_{\text{new}} = \theta - H^{-1} \nabla f(\theta)
-</script>
-</div>
+\]</div>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\nabla f(\theta)</span><script type="math/tex">\nabla f(\theta)</script></span> = gradient (first derivative)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> = Hessian (second derivative)</li>
+<li><span class="arithmatex">\(\nabla f(\theta)\)</span> = gradient (first derivative)</li>
+<li><span class="arithmatex">\(H\)</span> = Hessian (second derivative)</li>
 </ul>
 <p>Instead of just following the slope, we adjust steps using curvature to reach minima faster.</p>
 <h3 id="why-it-works">Why It Works</h3>
@@ -1530,14 +1515,9 @@ H = \begin{bmatrix}
 <h3 id="convexity">Convexity</h3>
 <p>A function is <strong>convex</strong> if the line segment between any two points on the graph lies above or on the graph itself.</p>
 <p>In mathematical terms:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 f(\lambda x + (1-\lambda) y) \leq \lambda f(x) + (1-\lambda) f(y) \quad \forall \lambda \in [0,1]
-</div>
-<script type="math/tex; mode=display">
-f(\lambda x + (1-\lambda) y) \leq \lambda f(x) + (1-\lambda) f(y) \quad \forall \lambda \in [0,1]
-</script>
-</div>
+\]</div>
 <h3 id="why-convexity-matters">Why Convexity Matters</h3>
 <ul>
 <li><strong>No local minima trap</strong>: Every local minimum is a global minimum.</li>
@@ -1545,7 +1525,7 @@ f(\lambda x + (1-\lambda) y) \leq \lambda f(x) + (1-\lambda) f(y) \quad \forall 
 </ul>
 <h3 id="identifying-convexity">Identifying Convexity</h3>
 <ul>
-<li>A twice-differentiable function is convex if its Hessian is <strong>positive semidefinite</strong> (all eigenvalues <span class="arithmatex"><span class="MathJax_Preview"> \geq 0 </span><script type="math/tex"> \geq 0 </script></span>).</li>
+<li>A twice-differentiable function is convex if its Hessian is <strong>positive semidefinite</strong> (all eigenvalues <span class="arithmatex">\( \geq 0 \)</span>).</li>
 </ul>
 <h2 id="summary">Summary</h2>
 <ul>
@@ -1618,6 +1598,12 @@ D. It minimizes computation time at every step</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

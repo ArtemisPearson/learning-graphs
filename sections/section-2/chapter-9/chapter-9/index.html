@@ -1571,26 +1571,21 @@
 <hr />
 <h2 id="91-singular-value-decomposition-svd">9.1 Singular Value Decomposition (SVD)</h2>
 <h3 id="concept">Concept</h3>
-<p><strong>SVD</strong> expresses any matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> as a product:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p><strong>SVD</strong> expresses any matrix <span class="arithmatex">\(A\)</span> as a product:</p>
+<div class="arithmatex">\[
 A = U \Sigma V^T
-</div>
-<script type="math/tex; mode=display">
-A = U \Sigma V^T
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> and <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> are orthogonal matrices.
-- <span class="arithmatex"><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span> is a diagonal matrix with non-negative real numbers (the <strong>singular values</strong>).</p>
+- <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span> are orthogonal matrices.
+- <span class="arithmatex">\(\Sigma\)</span> is a diagonal matrix with non-negative real numbers (the <strong>singular values</strong>).</p>
 <h3 id="how-and-why">How and Why</h3>
 <ul>
-<li><strong>Why?</strong> It reveals the "geometry" of how <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> stretches and rotates space.</li>
-<li><strong>How?</strong> Through careful decomposition of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> into simpler, interpretable parts.</li>
+<li><strong>Why?</strong> It reveals the "geometry" of how <span class="arithmatex">\(A\)</span> stretches and rotates space.</li>
+<li><strong>How?</strong> Through careful decomposition of <span class="arithmatex">\(A\)</span> into simpler, interpretable parts.</li>
 </ul>
 <details class="example" open="open">
 <summary>Geometric Intuition</summary>
-<p>Imagine <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> as first rotating space (via <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>), then stretching or shrinking (via <span class="arithmatex"><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>), then rotating again (via <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>).</p>
+<p>Imagine <span class="arithmatex">\(A\)</span> as first rotating space (via <span class="arithmatex">\(V\)</span>), then stretching or shrinking (via <span class="arithmatex">\(\Sigma\)</span>), then rotating again (via <span class="arithmatex">\(U\)</span>).</p>
 </details>
 <h3 id="applications">Applications</h3>
 <ul>
@@ -1601,44 +1596,34 @@ A = U \Sigma V^T
 <hr />
 <h2 id="92-moore-penrose-pseudoinverse">9.2 Moore-Penrose Pseudoinverse</h2>
 <h3 id="concept_1">Concept</h3>
-<p>For matrices that are <strong>non-square</strong> or <strong>singular</strong>, the <strong>pseudoinverse</strong> <span class="arithmatex"><span class="MathJax_Preview">A^+</span><script type="math/tex">A^+</script></span> provides a best-fit solution to <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x} = \mathbf{b}</span><script type="math/tex">A\mathbf{x} = \mathbf{b}</script></span>.</p>
+<p>For matrices that are <strong>non-square</strong> or <strong>singular</strong>, the <strong>pseudoinverse</strong> <span class="arithmatex">\(A^+\)</span> provides a best-fit solution to <span class="arithmatex">\(A\mathbf{x} = \mathbf{b}\)</span>.</p>
 <h3 id="how-and-why_1">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Not all systems have exact solutions—sometimes we must seek an approximate (least-squares) one.</li>
 <li><strong>How?</strong></li>
 </ul>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 A^+ = V \Sigma^+ U^T
-</div>
-<script type="math/tex; mode=display">
-A^+ = V \Sigma^+ U^T
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">\Sigma^+</span><script type="math/tex">\Sigma^+</script></span> replaces each nonzero singular value <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span> with <span class="arithmatex"><span class="MathJax_Preview">1/\sigma</span><script type="math/tex">1/\sigma</script></span>.</p>
+\]</div>
+<p>where <span class="arithmatex">\(\Sigma^+\)</span> replaces each nonzero singular value <span class="arithmatex">\(\sigma\)</span> with <span class="arithmatex">\(1/\sigma\)</span>.</p>
 <details class="tip">
 <summary>Best Fit Solutions</summary>
-<p>When the system is inconsistent, <span class="arithmatex"><span class="MathJax_Preview">A^+\mathbf{b}</span><script type="math/tex">A^+\mathbf{b}</script></span> gives the solution <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span> minimizing <span class="arithmatex"><span class="MathJax_Preview">\|A\mathbf{x} - \mathbf{b}\|</span><script type="math/tex">\|A\mathbf{x} - \mathbf{b}\|</script></span>.</p>
+<p>When the system is inconsistent, <span class="arithmatex">\(A^+\mathbf{b}\)</span> gives the solution <span class="arithmatex">\(\mathbf{x}\)</span> minimizing <span class="arithmatex">\(\|A\mathbf{x} - \mathbf{b}\|\)</span>.</p>
 </details>
 <hr />
 <h2 id="93-schur-decomposition">9.3 Schur Decomposition</h2>
 <h3 id="concept_2">Concept</h3>
-<p>Any square matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> can be decomposed as:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>Any square matrix <span class="arithmatex">\(A\)</span> can be decomposed as:</p>
+<div class="arithmatex">\[
 A = Q T Q^*
-</div>
-<script type="math/tex; mode=display">
-A = Q T Q^*
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> is unitary (or orthogonal for real matrices).
-- <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> is upper triangular.</p>
+- <span class="arithmatex">\(Q\)</span> is unitary (or orthogonal for real matrices).
+- <span class="arithmatex">\(T\)</span> is upper triangular.</p>
 <h3 id="how-and-why_2">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> Triangular matrices are easier to analyze and work with.</li>
-<li><strong>How?</strong> By applying a sequence of orthogonal transformations to <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</li>
+<li><strong>How?</strong> By applying a sequence of orthogonal transformations to <span class="arithmatex">\(A\)</span>.</li>
 </ul>
 <h3 id="applications_1">Applications</h3>
 <ul>
@@ -1647,7 +1632,7 @@ A = Q T Q^*
 </ul>
 <details class="info">
 <summary>Triangular Advantage</summary>
-<p>Finding eigenvalues of a triangular matrix <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> is as easy as reading its diagonal entries!</p>
+<p>Finding eigenvalues of a triangular matrix <span class="arithmatex">\(T\)</span> is as easy as reading its diagonal entries!</p>
 </details>
 <hr />
 <h2 id="94-householder-transformations">9.4 Householder Transformations</h2>
@@ -1658,15 +1643,10 @@ A = Q T Q^*
 <li><strong>Why?</strong> Useful in QR decomposition and in reducing matrices to simpler forms.</li>
 <li><strong>How?</strong></li>
 </ul>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 H = I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T \mathbf{v}}
-</div>
-<script type="math/tex; mode=display">
-H = I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T \mathbf{v}}
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> is carefully chosen.</p>
+\]</div>
+<p>where <span class="arithmatex">\(\mathbf{v}\)</span> is carefully chosen.</p>
 <h3 id="applications_2">Applications</h3>
 <ul>
 <li>Efficiently zeroing entries during QR decomposition.</li>
@@ -1706,7 +1686,7 @@ H = I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T \mathbf{v}}
 <p>These tools are essential for stability, performance, and deeper understanding of linear systems in scientific computing.</p>
 <hr />
 <h1 id="quiz">📝 Quiz</h1>
-<p>Which decomposition represents any <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> matrix as a product of two orthogonal matrices and a diagonal matrix?</p>
+<p>Which decomposition represents any <span class="arithmatex">\(m \times n\)</span> matrix as a product of two orthogonal matrices and a diagonal matrix?</p>
 <div class="upper-alpha">
 <p>A. LU Decomposition<br />
 B. Schur Decomposition<br />
@@ -1715,7 +1695,7 @@ D. Singular Value Decomposition (SVD)</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
-<p>The correct answer is <strong>D</strong>. <strong>Singular Value Decomposition (SVD)</strong> expresses any matrix as <span class="arithmatex"><span class="MathJax_Preview">U\Sigma V^T</span><script type="math/tex">U\Sigma V^T</script></span> with orthogonal <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> and <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>, and a diagonal <span class="arithmatex"><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>.</p>
+<p>The correct answer is <strong>D</strong>. <strong>Singular Value Decomposition (SVD)</strong> expresses any matrix as <span class="arithmatex">\(U\Sigma V^T\)</span> with orthogonal <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(V\)</span>, and a diagonal <span class="arithmatex">\(\Sigma\)</span>.</p>
 </details>
 
 
@@ -1767,6 +1747,12 @@ D. Singular Value Decomposition (SVD)</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

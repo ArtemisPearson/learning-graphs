@@ -1501,66 +1501,66 @@ Now, we expand our view to include <strong>geometry</strong>:  </p>
 <h2 id="51-the-inner-product">5.1 The Inner Product</h2>
 <p>The <strong>inner product</strong> (also called the <strong>dot product</strong>) gives a way to "multiply" two vectors and produce a <strong>single number</strong>.</p>
 <h3 id="definition">Definition</h3>
-<p>For two vectors <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}, \mathbf{v} \in \mathbb{R}^n</span><script type="math/tex">\mathbf{u}, \mathbf{v} \in \mathbb{R}^n</script></span>,
-[
+<p>For two vectors <span class="arithmatex">\(\mathbf{u}, \mathbf{v} \in \mathbb{R}^n\)</span>,
+$$
 \mathbf{u} \cdot \mathbf{v} = u_1v_1 + u_2v_2 + \cdots + u_nv_n
-]</p>
+$$</p>
 <p><strong>Example:</strong>
-[
+$$
 \mathbf{u} =
 \begin{bmatrix}
-1 \ 2 \ 3
+1 \\ 2 \\ 3
 \end{bmatrix},
 \quad
 \mathbf{v} =
 \begin{bmatrix}
-4 \ 5 \ 6
+4 \\ 5 \\ 6
 \end{bmatrix}
 \quad \Rightarrow \quad
 \mathbf{u} \cdot \mathbf{v} = 1\cdot4 + 2\cdot5 + 3\cdot6 = 32
-]</p>
+$$</p>
 <hr />
 <h3 id="geometric-interpretation">Geometric Interpretation</h3>
-<p>The inner product relates to the <strong>angle</strong> <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> between vectors:
-[
+<p>The inner product relates to the <strong>angle</strong> <span class="arithmatex">\(\theta\)</span> between vectors:
+$$
 \mathbf{u} \cdot \mathbf{v} = |\mathbf{u}| |\mathbf{v}| \cos\theta
-]</p>
+$$</p>
 <p>Thus:
-- If <span class="arithmatex"><span class="MathJax_Preview">\cos\theta &gt; 0</span><script type="math/tex">\cos\theta > 0</script></span>, the vectors point generally <strong>in the same direction</strong>.
-- If <span class="arithmatex"><span class="MathJax_Preview">\cos\theta = 0</span><script type="math/tex">\cos\theta = 0</script></span>, the vectors are <strong>orthogonal</strong> (perpendicular).
-- If <span class="arithmatex"><span class="MathJax_Preview">\cos\theta &lt; 0</span><script type="math/tex">\cos\theta < 0</script></span>, the vectors point <strong>opposite</strong> directions.</p>
+- If <span class="arithmatex">\(\cos\theta &gt; 0\)</span>, the vectors point generally <strong>in the same direction</strong>.
+- If <span class="arithmatex">\(\cos\theta = 0\)</span>, the vectors are <strong>orthogonal</strong> (perpendicular).
+- If <span class="arithmatex">\(\cos\theta &lt; 0\)</span>, the vectors point <strong>opposite</strong> directions.</p>
 <p><strong>Creative Analogy:</strong><br />
 Think of the inner product as measuring <strong>how much two vectors "agree" in direction</strong> — like two people pushing an object: are they cooperating, conflicting, or independent?</p>
 <hr />
 <h2 id="52-norm-and-distance">5.2 Norm and Distance</h2>
 <p>Using the inner product, we can define a <strong>norm</strong>, which measures the <strong>length</strong> (or magnitude) of a vector.</p>
 <h3 id="norm-length">Norm (Length)</h3>
-<p>The norm of <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> is:
-[
+<p>The norm of <span class="arithmatex">\(\mathbf{v}\)</span> is:
+$$
 |\mathbf{v}| = \sqrt{\mathbf{v} \cdot \mathbf{v}}
-]</p>
+$$</p>
 <p><strong>Example:</strong>
-[
+$$
 |\mathbf{v}| = \sqrt{4^2 + 5^2 + 6^2} = \sqrt{77}
-]</p>
+$$</p>
 <p><strong>Why Norms Matter:</strong><br />
 Norms allow us to measure <strong>how big</strong> a vector is — crucial for computing distances, speeds, and energy.</p>
 <hr />
 <h3 id="distance-between-vectors">Distance Between Vectors</h3>
-<p>The distance between <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> is:
-[
+<p>The distance between <span class="arithmatex">\(\mathbf{u}\)</span> and <span class="arithmatex">\(\mathbf{v}\)</span> is:
+$$
 |\mathbf{u} - \mathbf{v}|
-]</p>
-<p>It's simply the length of the vector from <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> to <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span>.</p>
+$$</p>
+<p>It's simply the length of the vector from <span class="arithmatex">\(\mathbf{u}\)</span> to <span class="arithmatex">\(\mathbf{v}\)</span>.</p>
 <p><strong>Applications:</strong><br />
 - In machine learning: measuring similarity between data points.
 - In physics: measuring displacement.</p>
 <hr />
 <h2 id="53-orthogonality">5.3 Orthogonality</h2>
 <p>Two vectors are <strong>orthogonal</strong> if:
-[
+$$
 \mathbf{u} \cdot \mathbf{v} = 0
-]</p>
+$$</p>
 <p><strong>Geometric Meaning:</strong><br />
 They meet at a <strong>90° angle</strong> — they are <strong>completely independent</strong> directionally.</p>
 <hr />
@@ -1574,54 +1574,47 @@ They meet at a <strong>90° angle</strong> — they are <strong>completely indep
 <h2 id="54-orthogonal-projections">5.4 Orthogonal Projections</h2>
 <p>Sometimes, we want to <strong>project</strong> a vector onto another vector (or subspace).</p>
 <h3 id="projecting-onto-a-vector">Projecting onto a Vector</h3>
-<p>Given a vector <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> and a unit vector <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span>, the projection of <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> onto <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> is:
-[
+<p>Given a vector <span class="arithmatex">\(\mathbf{v}\)</span> and a unit vector <span class="arithmatex">\(\mathbf{u}\)</span>, the projection of <span class="arithmatex">\(\mathbf{v}\)</span> onto <span class="arithmatex">\(\mathbf{u}\)</span> is:
+$$
 \text{proj}_{\mathbf{u}}(\mathbf{v}) = (\mathbf{v} \cdot \mathbf{u}) \mathbf{u}
-]</p>
+$$</p>
 <p><strong>Creative Picture:</strong><br />
-Imagine shining a flashlight directly onto <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> — the "shadow" of <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> on <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> is the projection.</p>
+Imagine shining a flashlight directly onto <span class="arithmatex">\(\mathbf{u}\)</span> — the "shadow" of <span class="arithmatex">\(\mathbf{v}\)</span> on <span class="arithmatex">\(\mathbf{u}\)</span> is the projection.</p>
 <hr />
 <h3 id="example">Example</h3>
-<p>Project <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} = [3, 4]</span><script type="math/tex">\mathbf{v} = [3, 4]</script></span> onto <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u} = [1, 0]</span><script type="math/tex">\mathbf{u} = [1, 0]</script></span> (already a unit vector):</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>Project <span class="arithmatex">\(\mathbf{v} = [3, 4]\)</span> onto <span class="arithmatex">\(\mathbf{u} = [1, 0]\)</span> (already a unit vector):</p>
+<div class="arithmatex">\[
 \text{proj}_{\mathbf{u}}(\mathbf{v}) = (3\cdot1 + 4\cdot0) \times [1,0] = 3 [1,0] = [3,0]
-</div>
-<script type="math/tex; mode=display">
-\text{proj}_{\mathbf{u}}(\mathbf{v}) = (3\cdot1 + 4\cdot0) \times [1,0] = 3 [1,0] = [3,0]
-</script>
-</div>
+\]</div>
 <hr />
 <h2 id="55-orthogonal-complement">5.5 Orthogonal Complement</h2>
-<p>The <strong>orthogonal complement</strong> of a subspace <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> consists of <strong>all vectors orthogonal to every vector in <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span></strong>.</p>
+<p>The <strong>orthogonal complement</strong> of a subspace <span class="arithmatex">\(W\)</span> consists of <strong>all vectors orthogonal to every vector in <span class="arithmatex">\(W\)</span></strong>.</p>
 <p><strong>Notation:</strong><br />
-<span class="arithmatex"><span class="MathJax_Preview">W^\perp</span><script type="math/tex">W^\perp</script></span></p>
+<span class="arithmatex">\(W^\perp\)</span></p>
 <p><strong>Importance:</strong><br />
-- It provides a way to "complete" spaces: everything not captured by <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> lies in <span class="arithmatex"><span class="MathJax_Preview">W^\perp</span><script type="math/tex">W^\perp</script></span>.
+- It provides a way to "complete" spaces: everything not captured by <span class="arithmatex">\(W\)</span> lies in <span class="arithmatex">\(W^\perp\)</span>.
 - Essential for decomposition techniques like the Gram-Schmidt process.</p>
 <hr />
 <h2 id="56-orthonormal-bases-and-gram-schmidt-process">5.6 Orthonormal Bases and Gram-Schmidt Process</h2>
 <h3 id="orthonormal-basis">Orthonormal Basis</h3>
 <p>A set of vectors is <strong>orthonormal</strong> if:
-- Each vector is a <strong>unit vector</strong> (<span class="arithmatex"><span class="MathJax_Preview">\|\mathbf{v}\| = 1</span><script type="math/tex">\|\mathbf{v}\| = 1</script></span>),
+- Each vector is a <strong>unit vector</strong> (<span class="arithmatex">\(\|\mathbf{v}\| = 1\)</span>),
 - Vectors are <strong>mutually orthogonal</strong>.</p>
 <p><strong>Example:</strong>
-[
-\left{
+$$
 \begin{bmatrix}
-1 \ 0
+1 \\ 0
 \end{bmatrix},
 \begin{bmatrix}
-0 \ 1
+0 \\ 1
 \end{bmatrix}
-\right}
-]
-is an orthonormal basis for <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>.</p>
+$$
+is an orthonormal basis for <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
 <hr />
 <h3 id="gram-schmidt-process">Gram-Schmidt Process</h3>
 <p>The <strong>Gram-Schmidt process</strong> converts any basis into an <strong>orthonormal basis</strong>.</p>
 <p><strong>Outline:</strong>
-1. Start with a basis <span class="arithmatex"><span class="MathJax_Preview"> \{\mathbf{v}_1, \mathbf{v}_2, \dots\} </span><script type="math/tex"> \{\mathbf{v}_1, \mathbf{v}_2, \dots\} </script></span>.
+1. Start with a basis <span class="arithmatex">\( \{\mathbf{v}_1, \mathbf{v}_2, \dots\} \)</span>.
 2. Orthogonalize:
    - Subtract projections onto earlier vectors.
 3. Normalize:
@@ -1647,17 +1640,17 @@ is an orthonormal basis for <span class="arithmatex"><span class="MathJax_Previe
 <p>This geometric language makes linear algebra a powerful tool for <strong>modeling, optimization, and approximation</strong>.</p>
 <hr />
 <h1 id="quiz">🧠 Quiz</h1>
+<p>What is the result of projecting vector <span class="arithmatex">\( \mathbf{b} \)</span> onto a unit vector <span class="arithmatex">\( \mathbf{u} \)</span>?</p>
 <div class="upper-alpha">
-<p>What is the result of projecting vector <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} </span><script type="math/tex"> \mathbf{b} </script></span> onto a unit vector <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{u} </span><script type="math/tex"> \mathbf{u} </script></span>?
-A. <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} \cdot \mathbf{u} </span><script type="math/tex"> \mathbf{b} \cdot \mathbf{u} </script></span>
-B. <span class="arithmatex"><span class="MathJax_Preview"> (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} </span><script type="math/tex"> (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} </script></span>
-C. <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{u} \cdot \mathbf{u} </span><script type="math/tex"> \mathbf{u} \cdot \mathbf{u} </script></span>
-D. <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} \cdot \mathbf{b} </span><script type="math/tex"> \mathbf{b} \cdot \mathbf{b} </script></span></p>
+<p>A. <span class="arithmatex">\( \mathbf{b} \cdot \mathbf{u} \)</span></p>
+<p>B. <span class="arithmatex">\( (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} \)</span></p>
+<p>C. <span class="arithmatex">\( \mathbf{u} \cdot \mathbf{u} \)</span></p>
+<p>D. <span class="arithmatex">\( \mathbf{b} \cdot \mathbf{b} \)</span></p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
 <p>The correct answer is <strong>B</strong>.<br />
-The projection of <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} </span><script type="math/tex"> \mathbf{b} </script></span> onto a unit vector <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{u} </span><script type="math/tex"> \mathbf{u} </script></span> is <span class="arithmatex"><span class="MathJax_Preview">(\mathbf{b} \cdot \mathbf{u})\mathbf{u}</span><script type="math/tex">(\mathbf{b} \cdot \mathbf{u})\mathbf{u}</script></span>.</p>
+The projection of <span class="arithmatex">\( \mathbf{b} \)</span> onto a unit vector <span class="arithmatex">\( \mathbf{u} \)</span> is <span class="arithmatex">\((\mathbf{b} \cdot \mathbf{u})\mathbf{u}\)</span>.</p>
 </details>
 
 
@@ -1709,6 +1702,12 @@ The projection of <span class="arithmatex"><span class="MathJax_Preview"> \mathb
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

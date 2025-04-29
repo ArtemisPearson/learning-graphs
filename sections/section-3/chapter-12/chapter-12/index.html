@@ -1444,14 +1444,9 @@
 <h2 id="121-stability-of-state-space-systems">12.1 Stability of State-Space Systems</h2>
 <p>In simple terms, a <strong>stable system</strong> tends to return to equilibrium after a disturbance.</p>
 <p>For a continuous-time system:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \dot{x}(t) = Ax(t)
-</div>
-<script type="math/tex; mode=display">
-\dot{x}(t) = Ax(t)
-</script>
-</div>
+\]</div>
 <p>the stability depends entirely on the <strong>eigenvalues of the matrix A</strong>.</p>
 <h3 id="stability-conditions">Stability Conditions</h3>
 <ul>
@@ -1469,33 +1464,23 @@
 <p>Sometimes, a system isn't stable by itself — but we can <strong>add feedback</strong> to stabilize it!</p>
 <p>Feedback means using the output (or state) to influence the input.</p>
 <p>A simple <strong>state feedback control law</strong> is:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
  u(t) = -Kx(t)
-</div>
-<script type="math/tex; mode=display">
- u(t) = -Kx(t)
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> is the <strong>feedback gain matrix</strong>.</p>
+\]</div>
+<p>where <span class="arithmatex">\(K\)</span> is the <strong>feedback gain matrix</strong>.</p>
 <p>Substituting this into the state equation gives:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \dot{x}(t) = (A - BK)x(t)
-</div>
-<script type="math/tex; mode=display">
-\dot{x}(t) = (A - BK)x(t)
-</script>
-</div>
+\]</div>
 <h3 id="why-feedback-works">Why Feedback Works</h3>
-<p>By choosing <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> wisely, we modify the system matrix from <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> to <span class="arithmatex"><span class="MathJax_Preview">A - BK</span><script type="math/tex">A - BK</script></span>. This new matrix can have <strong>different eigenvalues</strong>, meaning we can <em>move</em> the natural behaviors of the system toward stability.</p>
+<p>By choosing <span class="arithmatex">\(K\)</span> wisely, we modify the system matrix from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(A - BK\)</span>. This new matrix can have <strong>different eigenvalues</strong>, meaning we can <em>move</em> the natural behaviors of the system toward stability.</p>
 <hr />
 <h2 id="123-pole-placement">12.3 Pole Placement</h2>
-<p><strong>Pole placement</strong> is the art of designing <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> so that the closed-loop system <span class="arithmatex"><span class="MathJax_Preview">A - BK</span><script type="math/tex">A - BK</script></span> has desired eigenvalues (poles).</p>
+<p><strong>Pole placement</strong> is the art of designing <span class="arithmatex">\(K\)</span> so that the closed-loop system <span class="arithmatex">\(A - BK\)</span> has desired eigenvalues (poles).</p>
 <h3 id="procedure">Procedure</h3>
 <ol>
 <li>Decide where you want the eigenvalues (e.g., all with large negative real parts for fast decay).</li>
-<li>Solve for <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> that achieves those eigenvalues.</li>
+<li>Solve for <span class="arithmatex">\(K\)</span> that achieves those eigenvalues.</li>
 </ol>
 <p><strong>Key Requirement:</strong>
 - The system must be <strong>controllable</strong> (see Chapter 11) to place poles arbitrarily.</p>
@@ -1503,7 +1488,7 @@
 <p>Remember: eigenvalues were first studied in basic matrix theory. Now, they determine real-world system behavior, and we actively design matrices to control them!</p>
 <blockquote>
 <p><strong>Example:</strong>
-If you want a motor to settle to rest quickly after a bump, you design <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> to place poles far into the left half-plane.</p>
+If you want a motor to settle to rest quickly after a bump, you design <span class="arithmatex">\(K\)</span> to place poles far into the left half-plane.</p>
 </blockquote>
 <hr />
 <h2 id="124-linear-quadratic-regulator-lqr">12.4 Linear Quadratic Regulator (LQR)</h2>
@@ -1512,25 +1497,20 @@ If you want a motor to settle to rest quickly after a bump, you design <span cla
 - Avoid using huge control inputs (which could burn out hardware)</p>
 <p>The <strong>Linear Quadratic Regulator (LQR)</strong> solves this optimization problem:</p>
 <p>Minimize the cost function:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 J = \int_0^\infty \left( x(t)^T Q x(t) + u(t)^T R u(t) \right) dt
-</div>
-<script type="math/tex; mode=display">
-J = \int_0^\infty \left( x(t)^T Q x(t) + u(t)^T R u(t) \right) dt
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> penalizes bad states.
-- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> penalizes control effort.</p>
-<p>The resulting <strong>optimal feedback gain</strong> <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> satisfies an equation called the <strong>Riccati equation</strong>.</p>
+- <span class="arithmatex">\(Q\)</span> penalizes bad states.
+- <span class="arithmatex">\(R\)</span> penalizes control effort.</p>
+<p>The resulting <strong>optimal feedback gain</strong> <span class="arithmatex">\(K\)</span> satisfies an equation called the <strong>Riccati equation</strong>.</p>
 <h3 id="why-use-lqr">Why use LQR?</h3>
 <ul>
 <li><strong>Energy efficiency</strong>: Control effort is minimized.</li>
 <li><strong>Performance guarantee</strong>: System stabilizes optimally according to a clear cost.</li>
 </ul>
 <blockquote>
-<p><strong>Tip:</strong> LQR uses matrix optimization to find the "best" <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> rather than just "any" <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>.</p>
+<p><strong>Tip:</strong> LQR uses matrix optimization to find the "best" <span class="arithmatex">\(K\)</span> rather than just "any" <span class="arithmatex">\(K\)</span>.</p>
 </blockquote>
 <hr />
 <h2 id="125-svd-applications-in-control">12.5 SVD Applications in Control</h2>
@@ -1612,6 +1592,12 @@ D. Remove all external inputs</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

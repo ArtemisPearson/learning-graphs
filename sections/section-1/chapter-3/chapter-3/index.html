@@ -1327,25 +1327,25 @@ Now, we shift our focus to something deeper: <strong>spaces</strong> built from 
 - <strong>Scale</strong> any vector by a scalar and stay inside the space.</p>
 <p>In short: <strong>add and stretch without leaving</strong>.</p>
 <p><strong>Formal Definition:</strong><br />
-A set <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> is a vector space over a field (like <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}</span><script type="math/tex">\mathbb{R}</script></span> for real numbers) if it satisfies:
+A set <span class="arithmatex">\(V\)</span> is a vector space over a field (like <span class="arithmatex">\(\mathbb{R}\)</span> for real numbers) if it satisfies:
 - <strong>Closure under addition and scalar multiplication</strong>,
 - <strong>Existence of a zero vector</strong> (an "origin"),
 - <strong>Existence of additive inverses</strong> (every vector has a "negative" vector),
 - and other technical properties (like associativity, distributivity).</p>
 <p><strong>Example 1:</strong><br />
-All 2D vectors <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> where <span class="arithmatex"><span class="MathJax_Preview">x, y\in\mathbb{R}</span><script type="math/tex">x, y\in\mathbb{R}</script></span> form a vector space: <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>.</p>
+All 2D vectors <span class="arithmatex">\((x, y)\)</span> where <span class="arithmatex">\(x, y\in\mathbb{R}\)</span> form a vector space: <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
 <p><strong>Example 2:</strong><br />
-All 3D vectors <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span> where <span class="arithmatex"><span class="MathJax_Preview">x, y, z\in\mathbb{R}</span><script type="math/tex">x, y, z\in\mathbb{R}</script></span> form <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^3</span><script type="math/tex">\mathbb{R}^3</script></span>.</p>
+All 3D vectors <span class="arithmatex">\((x, y, z)\)</span> where <span class="arithmatex">\(x, y, z\in\mathbb{R}\)</span> form <span class="arithmatex">\(\mathbb{R}^3\)</span>.</p>
 <hr />
 <h2 id="32-subspaces">3.2 Subspaces</h2>
 <p>A <strong>subspace</strong> is simply a <strong>vector space within another vector space</strong>.</p>
 <p><strong>Criteria for a Subspace:</strong><br />
-A subset <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> of a vector space <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> is a subspace if:
-1. The <strong>zero vector</strong> is in <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>,
-2. <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> is <strong>closed under addition</strong>,
-3. <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> is <strong>closed under scalar multiplication</strong>.</p>
+A subset <span class="arithmatex">\(W\)</span> of a vector space <span class="arithmatex">\(V\)</span> is a subspace if:
+1. The <strong>zero vector</strong> is in <span class="arithmatex">\(W\)</span>,
+2. <span class="arithmatex">\(W\)</span> is <strong>closed under addition</strong>,
+3. <span class="arithmatex">\(W\)</span> is <strong>closed under scalar multiplication</strong>.</p>
 <p><strong>Example:</strong><br />
-In <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^3</span><script type="math/tex">\mathbb{R}^3</script></span>, the set of all vectors of the form <span class="arithmatex"><span class="MathJax_Preview">(x, 0, 0)</span><script type="math/tex">(x, 0, 0)</script></span> (i.e., lying on the <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>-axis) is a subspace.</p>
+In <span class="arithmatex">\(\mathbb{R}^3\)</span>, the set of all vectors of the form <span class="arithmatex">\((x, 0, 0)\)</span> (i.e., lying on the <span class="arithmatex">\(x\)</span>-axis) is a subspace.</p>
 <p><strong>Why Subspaces Matter:</strong><br />
 Subspaces capture <strong>constrained movement</strong>: movement along a line, inside a plane, or through a lower-dimensional world embedded inside a bigger space.</p>
 <p><strong>Creative Analogy:</strong><br />
@@ -1356,20 +1356,20 @@ Subspaces are like <strong>wires, sheets, or corners</strong> inside the room wh
 <p>The <strong>span</strong> of a set of vectors is the <strong>smallest subspace</strong> containing them — it's <strong>everything you can build</strong> by adding and scaling those vectors.</p>
 <p><strong>Example:</strong><br />
 If you have vectors:
-[
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-1 \
+1 \\
 0
 \end{bmatrix}
 , \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-0 \
+0 \\
 1
 \end{bmatrix}
-]
-in <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>, then their span is the <strong>entire plane</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>.</p>
+$$
+in <span class="arithmatex">\(\mathbb{R}^2\)</span>, then their span is the <strong>entire plane</strong> <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
 <p><strong>Why Span?</strong><br />
 When you ask, "What directions can I move using just these vectors?" — you are really asking about the span.</p>
 <hr />
@@ -1378,48 +1378,47 @@ When you ask, "What directions can I move using just these vectors?" — you are
 - <strong>Span</strong> the space,
 - Are <strong>linearly independent</strong> (none of them is redundant).</p>
 <p><strong>Example:</strong><br />
-[
-\left{
+$$
+{
 \begin{bmatrix}
-1 \
+1 \\
 0
-\end{bmatrix}
-,
+\end{bmatrix},
 \begin{bmatrix}
-0 \
+0 \\
 1
 \end{bmatrix}
-\right}
-]
-is a basis for <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>.</p>
+}
+$$
+is a basis for <span class="arithmatex">\(\mathbb{R}^2\)</span>.</p>
 <p><strong>Dimension:</strong><br />
 The <strong>dimension</strong> of a vector space is the <strong>number of vectors in any basis</strong>.</p>
 <p>Thus:
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span> has dimension 2,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^3</span><script type="math/tex">\mathbb{R}^3</script></span> has dimension 3,
-- A line through the origin in <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^3</span><script type="math/tex">\mathbb{R}^3</script></span> has dimension 1.</p>
+- <span class="arithmatex">\(\mathbb{R}^2\)</span> has dimension 2,
+- <span class="arithmatex">\(\mathbb{R}^3\)</span> has dimension 3,
+- A line through the origin in <span class="arithmatex">\(\mathbb{R}^3\)</span> has dimension 1.</p>
 <p><strong>Creative Analogy:</strong><br />
 If the vector space is a world, the basis vectors are its <strong>fundamental directions</strong> — the minimum GPS instructions you need to navigate everywhere!</p>
 <hr />
 <h2 id="35-row-space-column-space-and-null-space">3.5 Row Space, Column Space, and Null Space</h2>
-<p>When dealing with a matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, we encounter three critical subspaces:</p>
+<p>When dealing with a matrix <span class="arithmatex">\(A\)</span>, we encounter three critical subspaces:</p>
 <h3 id="row-space">Row Space</h3>
-<p>The space spanned by the <strong>rows</strong> of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+<p>The space spanned by the <strong>rows</strong> of <span class="arithmatex">\(A\)</span>.</p>
 <ul>
 <li>It tells us about <strong>relationships among equations</strong>.</li>
-<li>Lives in <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^n</span><script type="math/tex">\mathbb{R}^n</script></span> if <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> has <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> columns.</li>
+<li>Lives in <span class="arithmatex">\(\mathbb{R}^n\)</span> if <span class="arithmatex">\(A\)</span> has <span class="arithmatex">\(n\)</span> columns.</li>
 </ul>
 <h3 id="column-space">Column Space</h3>
-<p>The space spanned by the <strong>columns</strong> of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>.</p>
+<p>The space spanned by the <strong>columns</strong> of <span class="arithmatex">\(A\)</span>.</p>
 <ul>
-<li>It represents all <strong>possible outputs</strong> of the system <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x}</span><script type="math/tex">A\mathbf{x}</script></span>.</li>
-<li>Lives in <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^m</span><script type="math/tex">\mathbb{R}^m</script></span> if <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> has <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> rows.</li>
+<li>It represents all <strong>possible outputs</strong> of the system <span class="arithmatex">\(A\mathbf{x}\)</span>.</li>
+<li>Lives in <span class="arithmatex">\(\mathbb{R}^m\)</span> if <span class="arithmatex">\(A\)</span> has <span class="arithmatex">\(m\)</span> rows.</li>
 </ul>
 <h3 id="null-space-kernel">Null Space (Kernel)</h3>
-<p>The set of all vectors <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span> such that:
-[
+<p>The set of all vectors <span class="arithmatex">\(\mathbf{x}\)</span> such that:
+$$
 A\mathbf{x} = \mathbf{0}
-]</p>
+$$</p>
 <ul>
 <li>It captures all the <strong>"invisible" directions</strong> — inputs that produce zero output.</li>
 <li>Tells us about <strong>solutions to homogeneous systems</strong>.</li>
@@ -1450,18 +1449,18 @@ In the next chapter, we'll ask <strong>how to tell</strong> if vectors are <stro
 <p>These ideas create a bridge from basic matrix operations to the beautiful architecture of linear systems and transformations.</p>
 <hr />
 <h1 id="quiz">🧠 Quiz</h1>
+<p>Which of the following sets is a subspace of ℝ³?</p>
 <div class="upper-alpha">
-<p>Which of the following sets is a subspace of ℝ³?
-A. All vectors with <span class="arithmatex"><span class="MathJax_Preview">x + y + z = 1</span><script type="math/tex">x + y + z = 1</script></span>
-B. All vectors with <span class="arithmatex"><span class="MathJax_Preview">x = y = z</span><script type="math/tex">x = y = z</script></span>
-C. All vectors with <span class="arithmatex"><span class="MathJax_Preview">x^2 + y^2 + z^2 &lt; 1</span><script type="math/tex">x^2 + y^2 + z^2 < 1</script></span>
-D. All unit vectors in ℝ³</p>
+<p>A. All vectors with <span class="arithmatex">\(x + y + z = 1\)</span></p>
+<p>B. All vectors with <span class="arithmatex">\(x = y = z\)</span></p>
+<p>C. All vectors with <span class="arithmatex">\(x^2 + y^2 + z^2 &lt; 1\)</span></p>
+<p>D. All unit vectors in ℝ³</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
 <p>The correct answer is <strong>B</strong>.<br />
-The set of all vectors where <span class="arithmatex"><span class="MathJax_Preview">x = y = z</span><script type="math/tex">x = y = z</script></span> is a subspace: it contains the zero vector, is closed under addition, and is closed under scalar multiplication.<br />
-Sets defined by non-homogeneous conditions (like <span class="arithmatex"><span class="MathJax_Preview">x + y + z = 1</span><script type="math/tex">x + y + z = 1</script></span>) or norm constraints (like unit vectors) are <strong>not subspaces</strong>.</p>
+The set of all vectors where <span class="arithmatex">\(x = y = z\)</span> is a subspace: it contains the zero vector, is closed under addition, and is closed under scalar multiplication.<br />
+Sets defined by non-homogeneous conditions (like <span class="arithmatex">\(x + y + z = 1\)</span>) or norm constraints (like unit vectors) are <strong>not subspaces</strong>.</p>
 </details>
 
 
@@ -1513,6 +1512,12 @@ Sets defined by non-homogeneous conditions (like <span class="arithmatex"><span 
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -1450,21 +1450,16 @@
 <p>At its core, a <strong>neural network</strong> is just a collection of matrix operations.</p>
 <h3 id="linear-transformation">Linear Transformation</h3>
 <p>Each layer in a network applies a matrix multiplication:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 Z = W X + b
-</div>
-<script type="math/tex; mode=display">
-Z = W X + b
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> = weight matrix
-- <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> = input vector
-- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> = bias vector</p>
+- <span class="arithmatex">\(W\)</span> = weight matrix
+- <span class="arithmatex">\(X\)</span> = input vector
+- <span class="arithmatex">\(b\)</span> = bias vector</p>
 <p>This operation <strong>transforms</strong> input data into a new space, hoping to make patterns easier to recognize.</p>
 <h3 id="building-off-prior-knowledge">Building Off Prior Knowledge</h3>
-<p>Remember PCA? PCA found new axes (principal components) that reveal structure. Similarly, neural networks learn new transformations (via <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span>) that uncover hidden patterns in data.</p>
+<p>Remember PCA? PCA found new axes (principal components) that reveal structure. Similarly, neural networks learn new transformations (via <span class="arithmatex">\(W\)</span>) that uncover hidden patterns in data.</p>
 <h2 id="2-weight-initialization-using-svd">2. Weight Initialization Using SVD</h2>
 <p>Training a neural network can fail if we start with poor weight values.</p>
 <h3 id="the-problem">The Problem</h3>
@@ -1490,16 +1485,11 @@ Z = W X + b
 <li>Use <strong>matrix calculus</strong> to compute gradients.</li>
 <li>Gradients tell us the direction and amount to adjust weights.</li>
 </ul>
-<p>If <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is the loss function and <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> is the weight matrix:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>If <span class="arithmatex">\(L\)</span> is the loss function and <span class="arithmatex">\(W\)</span> is the weight matrix:</p>
+<div class="arithmatex">\[
 \frac{\partial L}{\partial W}
-</div>
-<script type="math/tex; mode=display">
-\frac{\partial L}{\partial W}
-</script>
-</div>
-<p>computes how a small change in <span class="arithmatex"><span class="MathJax_Preview">W</span><script type="math/tex">W</script></span> changes the loss <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span>.</p>
+\]</div>
+<p>computes how a small change in <span class="arithmatex">\(W\)</span> changes the loss <span class="arithmatex">\(L\)</span>.</p>
 <p>Matrix calculus rules (like the chain rule) allow efficient computation over entire layers.</p>
 <h2 id="4-gradient-descent-for-solving-linear-systems">4. Gradient Descent for Solving Linear Systems</h2>
 <p><strong>Gradient Descent</strong> is the workhorse of learning.</p>
@@ -1508,15 +1498,10 @@ Z = W X + b
 <li>Compute the gradient of the loss with respect to parameters.</li>
 <li>Update parameters in the negative direction of the gradient:</li>
 </ol>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \theta \leftarrow \theta - \eta \nabla L(\theta)
-</div>
-<script type="math/tex; mode=display">
-\theta \leftarrow \theta - \eta \nabla L(\theta)
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span> is the learning rate.</p>
+\]</div>
+<p>where <span class="arithmatex">\(\eta\)</span> is the learning rate.</p>
 <p>In linear systems, this mirrors methods like the <strong>Conjugate Gradient</strong> for finding solutions iteratively.</p>
 <h2 id="5-batch-vs-stochastic-methods">5. Batch vs. Stochastic Methods</h2>
 <p>When updating weights, should we use the entire dataset or just parts?</p>
@@ -1598,6 +1583,12 @@ D. Kronecker product</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

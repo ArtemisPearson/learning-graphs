@@ -1559,11 +1559,11 @@ $$
 B \mathbf{f} = \mathbf{s}
 $$
 where:
-- <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> is the incidence matrix,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span> is the flow vector,
-- <span class="arithmatex"><span class="MathJax_Preview">\mathbf{s}</span><script type="math/tex">\mathbf{s}</script></span> is the source/sink vector.</p>
+- <span class="arithmatex">\(B\)</span> is the incidence matrix,
+- <span class="arithmatex">\(\mathbf{f}\)</span> is the flow vector,
+- <span class="arithmatex">\(\mathbf{s}\)</span> is the source/sink vector.</p>
 <h3 id="solving-flow-problems">Solving Flow Problems</h3>
-<p>You solve for <span class="arithmatex"><span class="MathJax_Preview">\mathbf{f}</span><script type="math/tex">\mathbf{f}</script></span> just like you solve any linear system — using methods such as LU decomposition, least squares, or iterative techniques when necessary.</p>
+<p>You solve for <span class="arithmatex">\(\mathbf{f}\)</span> just like you solve any linear system — using methods such as LU decomposition, least squares, or iterative techniques when necessary.</p>
 <p>This highlights <strong>linear algebra's ability to model and optimize real-world systems</strong>!</p>
 <hr />
 <h2 id="162-convolution-as-matrix-multiplication">16.2 Convolution as Matrix Multiplication</h2>
@@ -1576,9 +1576,9 @@ where:
 <h3 id="toeplitz-matrix-structure">Toeplitz Matrix Structure</h3>
 <p>A Toeplitz matrix has constant diagonals:
 $$
-T = \begin{bmatrix}t_0 &amp; 0 &amp; 0 \ t_1 &amp; t_0 &amp; 0 \ t_2 &amp; t_1 &amp; t_0\end{bmatrix}
+T = \begin{bmatrix}t_0 &amp; 0 &amp; 0 \\ t_1 &amp; t_0 &amp; 0 \\ t_2 &amp; t_1 &amp; t_0\end{bmatrix}
 $$</p>
-<p>Multiplying <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> by a vector <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span> performs convolution!</p>
+<p>Multiplying <span class="arithmatex">\(T\)</span> by a vector <span class="arithmatex">\(\mathbf{x}\)</span> performs convolution!</p>
 <h4 id="why-matrix-formulation">Why Matrix Formulation?</h4>
 <ul>
 <li><strong>Unified Framework</strong>: Convolution becomes just another matrix operation.</li>
@@ -1589,17 +1589,17 @@ $$</p>
 <h3 id="geometric-transformations">Geometric Transformations</h3>
 <p>Spatial transformations like <strong>rotation</strong> and <strong>reflection</strong> are elegantly expressed using matrices.</p>
 <h4 id="reflection-across-a-line-2d">Reflection Across a Line (2D)</h4>
-<p>The reflection matrix across a line at angle <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> is:
+<p>The reflection matrix across a line at angle <span class="arithmatex">\(\theta\)</span> is:
 $$
-R = \begin{bmatrix}\cos 2\theta &amp; \sin 2\theta\ \sin 2\theta &amp; -\cos 2\theta\end{bmatrix}
+R = \begin{bmatrix}\cos 2\theta &amp; \sin 2\theta \\ \sin 2\theta &amp; -\cos 2\theta\end{bmatrix}
 $$</p>
 <h4 id="rotation-2d">Rotation (2D)</h4>
-<p>Rotation by angle <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> counterclockwise:
+<p>Rotation by angle <span class="arithmatex">\(\theta\)</span> counterclockwise:
 $$
-\text{Rotation} = \begin{bmatrix}\cos \theta &amp; -\sin \theta \ \sin \theta &amp; \cos \theta\end{bmatrix}
+\text{Rotation} = \begin{bmatrix}\cos \theta &amp; -\sin \theta \\ \sin \theta &amp; \cos \theta\end{bmatrix}
 $$</p>
 <h4 id="extension-to-3d">Extension to 3D</h4>
-<p>In 3D, rotation matrices expand to <span class="arithmatex"><span class="MathJax_Preview">3 \times 3</span><script type="math/tex">3 \times 3</script></span> matrices, often around principal axes (X, Y, Z).</p>
+<p>In 3D, rotation matrices expand to <span class="arithmatex">\(3 \times 3\)</span> matrices, often around principal axes (X, Y, Z).</p>
 <h3 id="why-this-matters">Why This Matters</h3>
 <ul>
 <li><strong>Graphics</strong>: Moving objects in games and simulations.</li>
@@ -1610,15 +1610,15 @@ $$</p>
 <hr />
 <h2 id="164-cross-product-operations">16.4 Cross Product Operations</h2>
 <h3 id="what-is-the-cross-product">What is the Cross Product?</h3>
-<p>Given two vectors <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u}</span><script type="math/tex">\mathbf{u}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> in <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^3</span><script type="math/tex">\mathbb{R}^3</script></span>, the cross product <span class="arithmatex"><span class="MathJax_Preview">\mathbf{u} \times \mathbf{v}</span><script type="math/tex">\mathbf{u} \times \mathbf{v}</script></span> produces a vector <strong>orthogonal</strong> to both.</p>
+<p>Given two vectors <span class="arithmatex">\(\mathbf{u}\)</span> and <span class="arithmatex">\(\mathbf{v}\)</span> in <span class="arithmatex">\(\mathbb{R}^3\)</span>, the cross product <span class="arithmatex">\(\mathbf{u} \times \mathbf{v}\)</span> produces a vector <strong>orthogonal</strong> to both.</p>
 <h3 id="matrix-formulation">Matrix Formulation</h3>
 <p>The cross product can be represented as a matrix multiplication:
 $$
-\mathbf{u} \times \mathbf{v} = [\mathbf{u}]<em>\times \mathbf{v}
+\mathbf{u} \times \mathbf{v} = \mathbf{u} \times \mathbf{v}
 $$
-where <span class="arithmatex"><span class="MathJax_Preview">[\mathbf{u}]_\times</span><script type="math/tex">[\mathbf{u}]_\times</script></span> is the <strong>skew-symmetric matrix</strong>:
+where <span class="arithmatex">\([\mathbf{u}]_\times\)</span> is the <strong>skew-symmetric matrix</strong>:
 $$
-[\mathbf{u}]</em>\times = \begin{bmatrix}0 &amp; -u_3 &amp; u_2\ u_3 &amp; 0 &amp; -u_1\ -u_2 &amp; u_1 &amp; 0\end{bmatrix}
+[\mathbf{u}]_\times = \begin{bmatrix}0 &amp; -u_3 &amp; u_2 \\ u_3 &amp; 0 &amp; -u_1 \\ -u_2 &amp; u_1 &amp; 0\end{bmatrix}
 $$</p>
 <p>This clever trick allows cross products to fit neatly into the world of <strong>linear transformations</strong>.</p>
 <hr />
@@ -1702,6 +1702,12 @@ D. Signal-to-noise ratio  </p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

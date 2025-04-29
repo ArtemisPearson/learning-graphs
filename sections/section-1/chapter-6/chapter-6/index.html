@@ -1529,11 +1529,11 @@
 These ideas form the mathematical core behind control systems, graphics transformations, machine learning models, and beyond.</p>
 <hr />
 <h2 id="61-what-is-a-linear-transformation">6.1 What is a Linear Transformation?</h2>
-<p>A <strong>linear transformation</strong> <span class="arithmatex"><span class="MathJax_Preview"> T </span><script type="math/tex"> T </script></span> is a rule that <strong>moves vectors around</strong> — but in a special, structure-preserving way.</p>
-<p><strong>Formally, <span class="arithmatex"><span class="MathJax_Preview"> T: \mathbb{R}^n \to \mathbb{R}^m </span><script type="math/tex"> T: \mathbb{R}^n \to \mathbb{R}^m </script></span></strong> is linear if:</p>
+<p>A <strong>linear transformation</strong> <span class="arithmatex">\( T \)</span> is a rule that <strong>moves vectors around</strong> — but in a special, structure-preserving way.</p>
+<p><strong>Formally, <span class="arithmatex">\( T: \mathbb{R}^n \to \mathbb{R}^m \)</span></strong> is linear if:</p>
 <ol>
-<li><span class="arithmatex"><span class="MathJax_Preview"> T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) </span><script type="math/tex"> T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) </script></span> (Additivity)</li>
-<li><span class="arithmatex"><span class="MathJax_Preview"> T(c\mathbf{u}) = cT(\mathbf{u}) </span><script type="math/tex"> T(c\mathbf{u}) = cT(\mathbf{u}) </script></span> (Homogeneity)</li>
+<li><span class="arithmatex">\( T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v}) \)</span> (Additivity)</li>
+<li><span class="arithmatex">\( T(c\mathbf{u}) = cT(\mathbf{u}) \)</span> (Homogeneity)</li>
 </ol>
 <p><strong>Creative Analogy:</strong><br />
 Imagine stretching, rotating, or flipping an entire room — but no ripping or folding allowed. Every movement is smooth and proportional.</p>
@@ -1548,10 +1548,10 @@ Imagine stretching, rotating, or flipping an entire room — but no ripping or f
 <h2 id="62-matrix-representation-of-linear-transformations">6.2 Matrix Representation of Linear Transformations</h2>
 <p>Every linear transformation can be represented by a <strong>matrix</strong>.<br />
 Applying a linear transformation is the same as <strong>multiplying</strong> by its associated matrix.</p>
-<p>If <span class="arithmatex"><span class="MathJax_Preview"> T </span><script type="math/tex"> T </script></span> is a linear transformation, there exists a matrix <span class="arithmatex"><span class="MathJax_Preview"> A </span><script type="math/tex"> A </script></span> such that:
-[
+<p>If <span class="arithmatex">\( T \)</span> is a linear transformation, there exists a matrix <span class="arithmatex">\( A \)</span> such that:
+$$
 T(\mathbf{x}) = A\mathbf{x}
-]</p>
+$$</p>
 <hr />
 <h3 id="why-matrices">Why Matrices?</h3>
 <ul>
@@ -1562,33 +1562,33 @@ T(\mathbf{x}) = A\mathbf{x}
 <hr />
 <h2 id="63-kernel-and-image">6.3 Kernel and Image</h2>
 <h3 id="kernel-null-space">Kernel (Null Space)</h3>
-<p>The <strong>kernel</strong> of a transformation <span class="arithmatex"><span class="MathJax_Preview">T</span><script type="math/tex">T</script></span> is the set of vectors sent to zero:
-[
+<p>The <strong>kernel</strong> of a transformation <span class="arithmatex">\(T\)</span> is the set of vectors sent to zero:
+$$
 \ker(T) = { \mathbf{x} \mid T(\mathbf{x}) = \mathbf{0} }
-]</p>
+$$</p>
 <p><strong>Interpretation:</strong><br />
 The kernel captures all directions that are "flattened" completely.</p>
 <hr />
 <h3 id="image-range">Image (Range)</h3>
 <p>The <strong>image</strong> of a transformation is the set of all possible outputs:
-[
+$$
 \text{Im}(T) = { T(\mathbf{x}) \mid \mathbf{x} \in \mathbb{R}^n }
-]</p>
+$$</p>
 <p><strong>Interpretation:</strong><br />
 The image tells you where vectors can land — the "reach" of the transformation.</p>
 <hr />
 <h2 id="64-change-of-basis-and-similar-matrices">6.4 Change of Basis and Similar Matrices</h2>
 <p>Sometimes, it's useful to <strong>change coordinates</strong> to better understand a transformation.</p>
-<p>Given a basis <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>, we can:
-- Represent vectors differently (relative to <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>),
-- Represent transformations differently (with respect to <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>).</p>
+<p>Given a basis <span class="arithmatex">\(B\)</span>, we can:
+- Represent vectors differently (relative to <span class="arithmatex">\(B\)</span>),
+- Represent transformations differently (with respect to <span class="arithmatex">\(B\)</span>).</p>
 <p>Two matrices are <strong>similar</strong> if they represent the <strong>same transformation</strong> but in <strong>different bases</strong>.</p>
 <p><strong>Formal Definition:</strong><br />
-Matrices <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> and <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> are similar if:
-[
+Matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are similar if:
+$$
 B = P^{-1}AP
-]
-for some invertible matrix <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>.</p>
+$$
+for some invertible matrix <span class="arithmatex">\(P\)</span>.</p>
 <hr />
 <h3 id="why-change-basis">Why Change Basis?</h3>
 <ul>
@@ -1604,18 +1604,18 @@ for some invertible matrix <span class="arithmatex"><span class="MathJax_Preview
 </blockquote>
 <p>These are <strong>eigenvectors</strong>.</p>
 <ul>
-<li>Given a transformation <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>,</li>
-<li>An <strong>eigenvector</strong> <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> satisfies:
-[
+<li>Given a transformation <span class="arithmatex">\(A\)</span>,</li>
+<li>An <strong>eigenvector</strong> <span class="arithmatex">\(\mathbf{v}\)</span> satisfies:
+$$
 A\mathbf{v} = \lambda \mathbf{v}
-]
-where <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> is a <strong>scalar</strong> called the <strong>eigenvalue</strong>.</li>
+$$
+where <span class="arithmatex">\(\lambda\)</span> is a <strong>scalar</strong> called the <strong>eigenvalue</strong>.</li>
 </ul>
 <hr />
 <h3 id="interpretation">Interpretation</h3>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> points along a <strong>natural direction</strong> of the transformation.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> tells you how much <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v}</span><script type="math/tex">\mathbf{v}</script></span> is <strong>stretched or shrunk</strong>.</li>
+<li><span class="arithmatex">\(\mathbf{v}\)</span> points along a <strong>natural direction</strong> of the transformation.</li>
+<li><span class="arithmatex">\(\lambda\)</span> tells you how much <span class="arithmatex">\(\mathbf{v}\)</span> is <strong>stretched or shrunk</strong>.</li>
 </ul>
 <p><strong>Creative Analogy:</strong><br />
 Imagine pushing a swing: the swing moves back and forth along its natural arc — it doesn’t spin sideways or move unpredictably.<br />
@@ -1624,58 +1624,58 @@ Eigenvectors are the natural "arcs" of linear transformations.</p>
 <h2 id="66-finding-eigenvalues-and-eigenvectors">6.6 Finding Eigenvalues and Eigenvectors</h2>
 <h3 id="step-1-find-eigenvalues">Step 1: Find Eigenvalues</h3>
 <p>Solve:
-[
+$$
 \det(A - \lambda I) = 0
-]
+$$
 This is the <strong>characteristic equation</strong>.</p>
-<p>The solutions <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> are the <strong>eigenvalues</strong>.</p>
+<p>The solutions <span class="arithmatex">\(\lambda\)</span> are the <strong>eigenvalues</strong>.</p>
 <hr />
 <h3 id="step-2-find-eigenvectors">Step 2: Find Eigenvectors</h3>
-<p>For each eigenvalue <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>, solve:
-[
+<p>For each eigenvalue <span class="arithmatex">\(\lambda\)</span>, solve:
+$$
 (A - \lambda I)\mathbf{v} = \mathbf{0}
-]
+$$
 to find eigenvectors.</p>
 <hr />
 <h3 id="example">Example</h3>
 <p>Let:
-[
+$$
 A =
 \begin{bmatrix}
-4 &amp; 1 \
+4 &amp; 1 \\
 2 &amp; 3
 \end{bmatrix}
-]</p>
+$$</p>
 <p>Find the eigenvalues:</p>
 <ol>
 <li>
-<p>Compute <span class="arithmatex"><span class="MathJax_Preview"> \det(A - \lambda I) </span><script type="math/tex"> \det(A - \lambda I) </script></span>:
-[
+<p>Compute <span class="arithmatex">\( \det(A - \lambda I) \)</span>:
+$$
 \det
 \begin{bmatrix}
-4-\lambda &amp; 1 \
+4-\lambda &amp; 1 \\
 2 &amp; 3-\lambda
 \end{bmatrix}
 = (4-\lambda)(3-\lambda) - 2
-]
+$$
 Expand:
-[
+$$
 = \lambda^2 - 7\lambda + 10
-]</p>
+$$</p>
 </li>
 <li>
-<p>Solve <span class="arithmatex"><span class="MathJax_Preview"> \lambda^2 - 7\lambda + 10 = 0 </span><script type="math/tex"> \lambda^2 - 7\lambda + 10 = 0 </script></span>.</p>
+<p>Solve <span class="arithmatex">\( \lambda^2 - 7\lambda + 10 = 0 \)</span>.</p>
 </li>
 </ol>
-<p>Solutions: <span class="arithmatex"><span class="MathJax_Preview"> \lambda = 5 </span><script type="math/tex"> \lambda = 5 </script></span> and <span class="arithmatex"><span class="MathJax_Preview"> \lambda = 2 </span><script type="math/tex"> \lambda = 2 </script></span>.</p>
+<p>Solutions: <span class="arithmatex">\( \lambda = 5 \)</span> and <span class="arithmatex">\( \lambda = 2 \)</span>.</p>
 <ol>
-<li>For each <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>, solve <span class="arithmatex"><span class="MathJax_Preview"> (A - \lambda I)\mathbf{v} = \mathbf{0} </span><script type="math/tex"> (A - \lambda I)\mathbf{v} = \mathbf{0} </script></span> to find eigenvectors.</li>
+<li>For each <span class="arithmatex">\(\lambda\)</span>, solve <span class="arithmatex">\( (A - \lambda I)\mathbf{v} = \mathbf{0} \)</span> to find eigenvectors.</li>
 </ol>
 <hr />
 <h2 id="67-eigenspaces-algebraic-and-geometric-multiplicities">6.7 Eigenspaces, Algebraic and Geometric Multiplicities</h2>
 <ul>
-<li>The <strong>eigenspace</strong> for an eigenvalue <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> is the set of all corresponding eigenvectors (plus the zero vector).</li>
-<li><strong>Algebraic multiplicity</strong>: how many times <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> appears as a root of the characteristic polynomial.</li>
+<li>The <strong>eigenspace</strong> for an eigenvalue <span class="arithmatex">\(\lambda\)</span> is the set of all corresponding eigenvectors (plus the zero vector).</li>
+<li><strong>Algebraic multiplicity</strong>: how many times <span class="arithmatex">\(\lambda\)</span> appears as a root of the characteristic polynomial.</li>
 <li><strong>Geometric multiplicity</strong>: the dimension of the eigenspace.</li>
 </ul>
 <p><strong>Important Fact:</strong><br />
@@ -1705,17 +1705,17 @@ Eigenvectors and eigenvalues describe the <strong>deep patterns</strong> of thes
 <p>This chapter prepares you for real-world applications where transformations need to be analyzed, optimized, and decomposed!</p>
 <hr />
 <h1 id="quiz">🧠 Quiz</h1>
+<p>What does it mean if a matrix has fewer than <span class="arithmatex">\(n\)</span> linearly independent eigenvectors?</p>
 <div class="upper-alpha">
-<p>What does it mean if a matrix has fewer than <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> linearly independent eigenvectors?
-A. It is not square
-B. It cannot be diagonalized
-C. It has no eigenvalues
-D. Its determinant is zero</p>
+<p>A. It is not square</p>
+<p>B. It cannot be diagonalized</p>
+<p>C. It has no eigenvalues</p>
+<p>D. Its determinant is zero</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
 <p>The correct answer is <strong>B</strong>.<br />
-If a matrix has fewer than <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> linearly independent eigenvectors, it <strong>cannot be diagonalized</strong> — that is, it cannot be written as a diagonal matrix under any basis change.</p>
+If a matrix has fewer than <span class="arithmatex">\(n\)</span> linearly independent eigenvectors, it <strong>cannot be diagonalized</strong> — that is, it cannot be written as a diagonal matrix under any basis change.</p>
 </details>
 
 
@@ -1767,6 +1767,12 @@ If a matrix has fewer than <span class="arithmatex"><span class="MathJax_Preview
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

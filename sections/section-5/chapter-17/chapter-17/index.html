@@ -1440,26 +1440,16 @@
 <p>Covariance measures how two variables change together:
 - <strong>Positive covariance</strong>: Variables increase together.
 - <strong>Negative covariance</strong>: As one increases, the other decreases.</p>
-<p>Mathematically, for variables <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> and <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>Mathematically, for variables <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>:</p>
+<div class="arithmatex">\[
 \text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)]
-</div>
-<script type="math/tex; mode=display">
-\text{Cov}(X, Y) = \mathbb{E}[(X - \mu_X)(Y - \mu_Y)]
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">\mu_X</span><script type="math/tex">\mu_X</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\mu_Y</span><script type="math/tex">\mu_Y</script></span> are the means of <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> and <span class="arithmatex"><span class="MathJax_Preview">Y</span><script type="math/tex">Y</script></span>.</p>
+\]</div>
+<p>where <span class="arithmatex">\(\mu_X\)</span> and <span class="arithmatex">\(\mu_Y\)</span> are the means of <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span>.</p>
 <h3 id="building-the-covariance-matrix">Building the Covariance Matrix</h3>
-<p>Given a dataset with multiple features, the <strong>covariance matrix</strong> summarizes covariances between all pairs of features. For a data matrix <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> (after centering by subtracting the mean):</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>Given a dataset with multiple features, the <strong>covariance matrix</strong> summarizes covariances between all pairs of features. For a data matrix <span class="arithmatex">\(X\)</span> (after centering by subtracting the mean):</p>
+<div class="arithmatex">\[
 \Sigma = \frac{1}{n-1}X^T X
-</div>
-<script type="math/tex; mode=display">
-\Sigma = \frac{1}{n-1}X^T X
-</script>
-</div>
+\]</div>
 <p><strong>Key Insight:</strong>
 The covariance matrix is symmetric and its structure tells us how features relate. Eigenvalues and eigenvectors of this matrix reveal the most important directions in the data.</p>
 <h2 id="2-principal-component-analysis-pca">2. Principal Component Analysis (PCA)</h2>
@@ -1468,14 +1458,14 @@ The covariance matrix is symmetric and its structure tells us how features relat
 <h3 id="how-it-works">How It Works</h3>
 <ol>
 <li><strong>Center the data</strong>: Subtract the mean from each feature.</li>
-<li><strong>Compute the covariance matrix</strong> <span class="arithmatex"><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span>.</li>
+<li><strong>Compute the covariance matrix</strong> <span class="arithmatex">\(\Sigma\)</span>.</li>
 <li><strong>Find eigenvectors and eigenvalues</strong>:<ul>
 <li>Eigenvectors = Principal components (new axes)</li>
 <li>Eigenvalues = How much variance each principal component captures</li>
 </ul>
 </li>
 <li><strong>Sort eigenvectors</strong> by eigenvalues in descending order.</li>
-<li><strong>Project data</strong> onto the top <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> eigenvectors to reduce dimensionality.</li>
+<li><strong>Project data</strong> onto the top <span class="arithmatex">\(k\)</span> eigenvectors to reduce dimensionality.</li>
 </ol>
 <h3 id="why-pca-works">Why PCA Works</h3>
 <ul>
@@ -1489,15 +1479,10 @@ The covariance matrix is symmetric and its structure tells us how features relat
 <h2 id="3-whitening-transformations">3. Whitening Transformations</h2>
 <p>PCA decorrelates features but may still have different variances along each axis. <strong>Whitening</strong> goes a step further: it scales the principal components so that they have unit variance.</p>
 <p>Mathematically:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 X_{\text{white}} = \Lambda^{-1/2} U^T X
-</div>
-<script type="math/tex; mode=display">
-X_{\text{white}} = \Lambda^{-1/2} U^T X
-</script>
-</div>
-<p>where <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> contains the eigenvectors and <span class="arithmatex"><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span> is the diagonal matrix of eigenvalues.</p>
+\]</div>
+<p>where <span class="arithmatex">\(U\)</span> contains the eigenvectors and <span class="arithmatex">\(\Lambda\)</span> is the diagonal matrix of eigenvalues.</p>
 <p><strong>Use Cases:</strong>
 - Improve stability and convergence in machine learning algorithms.
 - Standardize features without introducing correlations.</p>
@@ -1505,7 +1490,7 @@ X_{\text{white}} = \Lambda^{-1/2} U^T X
 <p>Often, data can be well-approximated by a matrix with <strong>lower rank</strong> — fewer "independent dimensions" than the original.</p>
 <h3 id="how-it-works_1">How It Works</h3>
 <ul>
-<li><strong>Singular Value Decomposition (SVD)</strong> decomposes a matrix into <span class="arithmatex"><span class="MathJax_Preview">U \Sigma V^T</span><script type="math/tex">U \Sigma V^T</script></span>.</li>
+<li><strong>Singular Value Decomposition (SVD)</strong> decomposes a matrix into <span class="arithmatex">\(U \Sigma V^T\)</span>.</li>
 <li>By keeping only the largest singular values and corresponding vectors, we build a lower-rank approximation.</li>
 </ul>
 <div class="admonition example">
@@ -1591,6 +1576,12 @@ D. QR factorization</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

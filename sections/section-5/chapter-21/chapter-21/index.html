@@ -1632,18 +1632,13 @@
 <p>In this chapter, we study the <strong>spectral theorem</strong>, <strong>matrix perturbation theory</strong>, <strong>tensor operations</strong>, <strong>Kronecker products</strong>, <strong>vectorization techniques</strong>, and <strong>sparse matrix solvers</strong> — all critical tools for working at scale and with cutting-edge AI systems.</p>
 <h2 id="1-spectral-theorem">1. Spectral Theorem</h2>
 <h3 id="what-it-says">What It Says</h3>
-<p>If a matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is symmetric, it can be <strong>diagonalized</strong> by an orthogonal matrix:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>If a matrix <span class="arithmatex">\(A\)</span> is symmetric, it can be <strong>diagonalized</strong> by an orthogonal matrix:</p>
+<div class="arithmatex">\[
 A = Q \Lambda Q^T
-</div>
-<script type="math/tex; mode=display">
-A = Q \Lambda Q^T
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> = matrix of orthonormal eigenvectors
-- <span class="arithmatex"><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span> = diagonal matrix of eigenvalues</p>
+- <span class="arithmatex">\(Q\)</span> = matrix of orthonormal eigenvectors
+- <span class="arithmatex">\(\Lambda\)</span> = diagonal matrix of eigenvalues</p>
 <h3 id="why-it-matters">Why It Matters</h3>
 <ul>
 <li>Simplifies computations dramatically.</li>
@@ -1697,39 +1692,24 @@ This extends your understanding of eigenanalysis (Chapter 6) into practical, imp
 You already saw matrix calculus in backpropagation (Chapter 18); here, we formalize the broader theory.</p>
 <h2 id="5-kronecker-product-and-vectorization">5. Kronecker Product and Vectorization</h2>
 <h3 id="kronecker-product">Kronecker Product</h3>
-<p>Given matrices <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> and <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>Given matrices <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>:</p>
+<div class="arithmatex">\[
 A \otimes B
-</div>
-<script type="math/tex; mode=display">
-A \otimes B
-</script>
-</div>
-<p>produces a large block matrix — every element of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> multiplied by the entire matrix <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>.</p>
+\]</div>
+<p>produces a large block matrix — every element of <span class="arithmatex">\(A\)</span> multiplied by the entire matrix <span class="arithmatex">\(B\)</span>.</p>
 <p><strong>Usage:</strong>
 - Modeling structured systems.
 - Compactly representing large linear operations.</p>
 <h3 id="vectorization">Vectorization</h3>
 <p>"Flatten" a matrix into a long column vector by stacking its columns.</p>
 <p>Notation:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \text{vec}(A)
-</div>
-<script type="math/tex; mode=display">
-\text{vec}(A)
-</script>
-</div>
+\]</div>
 <p><strong>Key Identity:</strong></p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \text{vec}(ABC) = (C^T \otimes A) \text{vec}(B)
-</div>
-<script type="math/tex; mode=display">
-\text{vec}(ABC) = (C^T \otimes A) \text{vec}(B)
-</script>
-</div>
+\]</div>
 <p>Vectorization allows matrix equations to be manipulated as large linear systems — a powerful trick for optimization and computation.</p>
 <h2 id="6-sparse-matrix-solvers">6. Sparse Matrix Solvers</h2>
 <h3 id="sparse-matrices">Sparse Matrices</h3>
@@ -1826,6 +1806,12 @@ D. They eliminate the need for eigenvalues</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

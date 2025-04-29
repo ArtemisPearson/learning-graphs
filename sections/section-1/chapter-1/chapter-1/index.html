@@ -1258,7 +1258,7 @@ This chapter builds the <strong>conceptual cornerstones</strong> you'll need for
 <p>A <strong>scalar</strong> is a single number.<br />
 Think of it as a single point on a number line — it could represent temperature, voltage, or the size of a physical quantity.</p>
 <p><strong>Example:</strong><br />
-<span class="arithmatex"><span class="MathJax_Preview"> 7 </span><script type="math/tex"> 7 </script></span>, <span class="arithmatex"><span class="MathJax_Preview"> -3.2 </span><script type="math/tex"> -3.2 </script></span>, and <span class="arithmatex"><span class="MathJax_Preview"> \pi </span><script type="math/tex"> \pi </script></span> are all scalars.</p>
+<span class="arithmatex">\( 7 \)</span>, <span class="arithmatex">\( -3.2 \)</span>, and <span class="arithmatex">\( \pi \)</span> are all scalars.</p>
 <p><strong>Why are scalars important?</strong><br />
 Scalars serve as the "units" of information in linear algebra. They're the <strong>building blocks</strong> that scale vectors and matrices.<br />
 If vectors are arrows, then scalars are the fuel that make arrows longer or flip them backwards!</p>
@@ -1267,14 +1267,14 @@ If vectors are arrows, then scalars are the fuel that make arrows longer or flip
 <p>A <strong>vector</strong> is an <strong>ordered list of numbers</strong>, arranged either horizontally (a row vector) or vertically (a column vector).</p>
 <p><strong>Example:</strong><br />
 A column vector:
-[
+$$
 \mathbf{v} =
 \begin{bmatrix}
-2 \
--1 \
+2 \\
+-1 \\
 3
 \end{bmatrix}
-]</p>
+$$</p>
 <p><strong>Visualizing Vectors:</strong><br />
 Imagine a vector as an <strong>arrow</strong> pointing from the origin to a point in space.<br />
 Each number tells you how far to move along each axis (like "walk 2 units east, 1 unit south, and 3 units up").</p>
@@ -1287,14 +1287,14 @@ Vectors <strong>don't have a location</strong>, just a direction and magnitude. 
 <h2 id="13-matrices">1.3 Matrices</h2>
 <p>A <strong>matrix</strong> is a <strong>rectangular grid</strong> of numbers organized into <strong>rows and columns</strong>.</p>
 <p><strong>Example:</strong>
-[
+$$
 A =
 \begin{bmatrix}
-1 &amp; 2 &amp; 3 \
+1 &amp; 2 &amp; 3 \\
 4 &amp; 5 &amp; 6
 \end{bmatrix}
-]
-This matrix has <strong>2 rows</strong> and <strong>3 columns</strong>, so we say it's a <span class="arithmatex"><span class="MathJax_Preview"> 2 \times 3 </span><script type="math/tex"> 2 \times 3 </script></span> matrix.</p>
+$$
+This matrix has <strong>2 rows</strong> and <strong>3 columns</strong>, so we say it's a <span class="arithmatex">\( 2 \times 3 \)</span> matrix.</p>
 <p><strong>Why matrices?</strong><br />
 Matrices <strong>organize and transform data</strong>. They can:
 - Represent multiple linear equations compactly.
@@ -1306,39 +1306,39 @@ Think of matrices like <strong>filters</strong>: you feed in an input (vector), 
 <h2 id="14-systems-of-linear-equations-sles">1.4 Systems of Linear Equations (SLEs)</h2>
 <p>A <strong>system of linear equations</strong> is a collection of equations where each term is either a constant or a constant times a variable.</p>
 <p><strong>Example:</strong>
-[
+$$
 \begin{aligned}
 2x + 3y &amp;= 5 \
 4x - y &amp;= 1
 \end{aligned}
-]</p>
+$$</p>
 <p><strong>How do we express this system using matrices?</strong><br />
 Let's define:
-- <strong>Matrix of coefficients</strong> <span class="arithmatex"><span class="MathJax_Preview"> A </span><script type="math/tex"> A </script></span>:
-[
+- <strong>Matrix of coefficients</strong> <span class="arithmatex">\( A \)</span>:
+$$
 \begin{bmatrix}
-2 &amp; 3 \
+2 &amp; 3 \\
 4 &amp; -1
 \end{bmatrix}
-]
-- <strong>Vector of variables</strong> <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{x} </span><script type="math/tex"> \mathbf{x} </script></span>:
-[
+$$
+- <strong>Vector of variables</strong> <span class="arithmatex">\( \mathbf{x} \)</span>:
+$$
 \begin{bmatrix}
-x \
+x \\
 y
 \end{bmatrix}
-]
-- <strong>Vector of constants</strong> <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{b} </span><script type="math/tex"> \mathbf{b} </script></span>:
-[
+$$
+- <strong>Vector of constants</strong> <span class="arithmatex">\( \mathbf{b} \)</span>:
+$$
 \begin{bmatrix}
-5 \
+5 \\
 1
 \end{bmatrix}
-]</p>
+$$</p>
 <p>Then the system becomes:
-[
+$$
 A\mathbf{x} = \mathbf{b}
-]</p>
+$$</p>
 <p><strong>Why express it this way?</strong><br />
 Because matrices allow us to <strong>efficiently solve</strong> systems — using algorithms like Gaussian elimination or matrix inverses, and they make scaling to large problems possible.</p>
 <hr />
@@ -1377,17 +1377,17 @@ Imagine two roads. They can:
 </ul>
 <hr />
 <h1 id="quiz">🧠 Quiz</h1>
+<p>Which of the following systems of equations has no solution, and why?</p>
 <div class="upper-alpha">
-<p>Which of the following systems of equations has no solution, and why?
-A. A consistent system with full rank
-B. A system where the augmented matrix has a pivot in every row
-C. A system where two rows of the augmented matrix are contradictory
-D. A homogeneous system</p>
+<p>A. A consistent system with full rank</p>
+<p>B. A system where the augmented matrix has a pivot in every row</p>
+<p>C. A system where two rows of the augmented matrix are contradictory</p>
+<p>D. A homogeneous system</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
 <p>The correct answer is <strong>C</strong>.<br />
-A system where two rows of the augmented matrix are contradictory (e.g., one row says <span class="arithmatex"><span class="MathJax_Preview"> 0x + 0y = 5 </span><script type="math/tex"> 0x + 0y = 5 </script></span>) indicates inconsistency — meaning no solution exists.</p>
+A system where two rows of the augmented matrix are contradictory (e.g., one row says <span class="arithmatex">\( 0x + 0y = 5 \)</span>) indicates inconsistency — meaning no solution exists.</p>
 </details>
 
 
@@ -1439,6 +1439,12 @@ A system where two rows of the augmented matrix are contradictory (e.g., one row
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

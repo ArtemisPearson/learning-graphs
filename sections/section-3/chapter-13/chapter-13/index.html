@@ -798,9 +798,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-eateat" class="md-nav__link">
+  <a href="#what-is-eat" class="md-nav__link">
     <span class="md-ellipsis">
-      What is e^{At}e^{At}?
+      What is \(e^{At}\)?
     </span>
   </a>
   
@@ -1261,9 +1261,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#what-is-eateat" class="md-nav__link">
+  <a href="#what-is-eat" class="md-nav__link">
     <span class="md-ellipsis">
-      What is e^{At}e^{At}?
+      What is \(e^{At}\)?
     </span>
   </a>
   
@@ -1383,44 +1383,29 @@
 <hr />
 <h2 id="131-matrix-exponentiation-for-system-evolution">13.1 Matrix Exponentiation for System Evolution</h2>
 <p>Consider the continuous-time system:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \dot{x}(t) = Ax(t)
-</div>
-<script type="math/tex; mode=display">
-\dot{x}(t) = Ax(t)
-</script>
-</div>
-<p>We already know that <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>'s eigenvalues determine stability. But how exactly does <span class="arithmatex"><span class="MathJax_Preview">x(t)</span><script type="math/tex">x(t)</script></span> evolve over time?</p>
+\]</div>
+<p>We already know that <span class="arithmatex">\(A\)</span>'s eigenvalues determine stability. But how exactly does <span class="arithmatex">\(x(t)\)</span> evolve over time?</p>
 <p>The solution is given by the <strong>matrix exponential</strong>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 x(t) = e^{At}x(0)
-</div>
-<script type="math/tex; mode=display">
-x(t) = e^{At}x(0)
-</script>
-</div>
-<h3 id="what-is-eateat">What is <span class="arithmatex"><span class="MathJax_Preview">e^{At}</span><script type="math/tex">e^{At}</script></span>?</h3>
+\]</div>
+<h3 id="what-is-eat">What is <span class="arithmatex">\(e^{At}\)</span>?</h3>
 <ul>
 <li>It's defined similarly to the scalar exponential via a power series:</li>
 </ul>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 e^{At} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \dots
-</div>
-<script type="math/tex; mode=display">
-e^{At} = I + At + \frac{(At)^2}{2!} + \frac{(At)^3}{3!} + \dots
-</script>
-</div>
+\]</div>
 <ul>
 <li>It "sums up" all possible infinitesimal changes over time.</li>
 </ul>
 <blockquote>
-<p><strong>Tip:</strong> Think of <span class="arithmatex"><span class="MathJax_Preview">e^{At}</span><script type="math/tex">e^{At}</script></span> as a "super-transformation" that smoothly evolves the state <span class="arithmatex"><span class="MathJax_Preview">x(0)</span><script type="math/tex">x(0)</script></span> over time.</p>
+<p><strong>Tip:</strong> Think of <span class="arithmatex">\(e^{At}\)</span> as a "super-transformation" that smoothly evolves the state <span class="arithmatex">\(x(0)\)</span> over time.</p>
 </blockquote>
 <h3 id="why-matrix-exponentiation-works">Why Matrix Exponentiation Works</h3>
-<p>Systems governed by linear differential equations can be thought of as being "constantly nudged" by <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>. Matrix exponentiation mathematically captures this cumulative nudge.</p>
+<p>Systems governed by linear differential equations can be thought of as being "constantly nudged" by <span class="arithmatex">\(A\)</span>. Matrix exponentiation mathematically captures this cumulative nudge.</p>
 <blockquote>
 <p><strong>Example:</strong>
 In an RLC electrical circuit, the voltages and currents evolve over time according to matrix exponentials.</p>
@@ -1432,32 +1417,22 @@ In an RLC electrical circuit, the voltages and currents evolve over time accordi
 - The next state depends only on the current state.
 - Transitions are governed by probabilities.</p>
 <p>The evolution is:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
  x[k+1] = P x[k]
-</div>
-<script type="math/tex; mode=display">
- x[k+1] = P x[k]
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">x[k]</span><script type="math/tex">x[k]</script></span> is the state probability vector at step <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>.
-- <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> is the <strong>transition matrix</strong> (stochastic matrix: rows sum to 1).</p>
+- <span class="arithmatex">\(x[k]\)</span> is the state probability vector at step <span class="arithmatex">\(k\)</span>.
+- <span class="arithmatex">\(P\)</span> is the <strong>transition matrix</strong> (stochastic matrix: rows sum to 1).</p>
 <h3 id="how-to-predict-future-states">How to Predict Future States</h3>
-<p>By taking powers of <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>By taking powers of <span class="arithmatex">\(P\)</span>:</p>
+<div class="arithmatex">\[
  x[k] = P^k x[0]
-</div>
-<script type="math/tex; mode=display">
- x[k] = P^k x[0]
-</script>
-</div>
-<p>So <span class="arithmatex"><span class="MathJax_Preview">P^k</span><script type="math/tex">P^k</script></span> tells us how the system evolves after <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> steps.</p>
+\]</div>
+<p>So <span class="arithmatex">\(P^k\)</span> tells us how the system evolves after <span class="arithmatex">\(k\)</span> steps.</p>
 <h3 id="intuitive-view">Intuitive View</h3>
-<p>Imagine flipping between different webpages. <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> tells you the chance of jumping from one page to another. Matrix powers predict where you'll likely end up after many clicks.</p>
+<p>Imagine flipping between different webpages. <span class="arithmatex">\(P\)</span> tells you the chance of jumping from one page to another. Matrix powers predict where you'll likely end up after many clicks.</p>
 <blockquote>
-<p><strong>Note:</strong> Eigenvalues and eigenvectors of <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span> determine long-term behaviors, connecting back to our spectral analysis from earlier chapters!</p>
+<p><strong>Note:</strong> Eigenvalues and eigenvectors of <span class="arithmatex">\(P\)</span> determine long-term behaviors, connecting back to our spectral analysis from earlier chapters!</p>
 </blockquote>
 <hr />
 <h2 id="133-model-reduction-techniques">13.3 Model Reduction Techniques</h2>
@@ -1556,6 +1531,12 @@ D. Perform matrix inversion</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

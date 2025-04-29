@@ -1384,73 +1384,57 @@
 <h2 id="111-state-space-representation">11.1 State-Space Representation</h2>
 <p>Imagine trying to describe every possible behavior of a system like a robot arm or an electric motor. Instead of writing down countless equations, we <strong>organize</strong> everything neatly into matrices and vectors.</p>
 <p>A <strong>state-space model</strong> expresses a system with two main equations:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-\dot{x}(t) = Ax(t) + Bu(t) \\
+<div class="arithmatex">\[
+\dot{x}(t) = Ax(t) + Bu(t) \\\\
 y(t) = Cx(t) + Du(t)
-</div>
-<script type="math/tex; mode=display">
-\dot{x}(t) = Ax(t) + Bu(t) \\
-y(t) = Cx(t) + Du(t)
-</script>
-</div>
+\]</div>
 <p>Where:
-- <span class="arithmatex"><span class="MathJax_Preview">x(t)</span><script type="math/tex">x(t)</script></span>: <strong>State vector</strong> (describes the internal condition of the system)
-- <span class="arithmatex"><span class="MathJax_Preview">u(t)</span><script type="math/tex">u(t)</script></span>: <strong>Input vector</strong> (external signals we control)
-- <span class="arithmatex"><span class="MathJax_Preview">y(t)</span><script type="math/tex">y(t)</script></span>: <strong>Output vector</strong> (what we measure or observe)
-- <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span>, <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>: <strong>Matrices</strong> that define how states and inputs relate to state changes and outputs</p>
+- <span class="arithmatex">\(x(t)\)</span>: <strong>State vector</strong> (describes the internal condition of the system)
+- <span class="arithmatex">\(u(t)\)</span>: <strong>Input vector</strong> (external signals we control)
+- <span class="arithmatex">\(y(t)\)</span>: <strong>Output vector</strong> (what we measure or observe)
+- <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(C\)</span>, <span class="arithmatex">\(D\)</span>: <strong>Matrices</strong> that define how states and inputs relate to state changes and outputs</p>
 <h3 id="why-does-this-work">Why does this work?</h3>
 <p>Matrix multiplication naturally captures how multiple inputs affect multiple outputs simultaneously. Instead of writing separate equations for every variable, matrices elegantly compress all the relationships into a compact form.</p>
 <blockquote>
-<p><strong>Tip:</strong> Think of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> as "how the system evolves," <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> as "how inputs affect the system," <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> as "how we observe the system," and <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> as "direct influence of inputs on outputs."</p>
+<p><strong>Tip:</strong> Think of <span class="arithmatex">\(A\)</span> as "how the system evolves," <span class="arithmatex">\(B\)</span> as "how inputs affect the system," <span class="arithmatex">\(C\)</span> as "how we observe the system," and <span class="arithmatex">\(D\)</span> as "direct influence of inputs on outputs."</p>
 </blockquote>
 <hr />
 <h2 id="112-controllability">11.2 Controllability</h2>
 <p><strong>Controllability</strong> asks: <em>"Can we move the system to any desired state using available inputs?"</em></p>
 <p>To answer this, we use the <strong>Controllability Matrix</strong>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \mathcal{C} = \begin{bmatrix} B &amp; AB &amp; A^2B &amp; \dots &amp; A^{n-1}B \end{bmatrix}
-</div>
-<script type="math/tex; mode=display">
-\mathcal{C} = \begin{bmatrix} B & AB & A^2B & \dots & A^{n-1}B \end{bmatrix}
-</script>
-</div>
+\]</div>
 <ul>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{C}</span><script type="math/tex">\mathcal{C}</script></span> has <strong>full rank</strong> (i.e., rank = number of states <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>), the system is <strong>controllable</strong>.</li>
+<li>If <span class="arithmatex">\(\mathcal{C}\)</span> has <strong>full rank</strong> (i.e., rank = number of states <span class="arithmatex">\(n\)</span>), the system is <strong>controllable</strong>.</li>
 </ul>
 <h3 id="intuitive-view">Intuitive View</h3>
-<p>Picture a video game controller. If certain buttons are broken, you might not be able to move your character anywhere you want. Similarly, if <span class="arithmatex"><span class="MathJax_Preview">\mathcal{C}</span><script type="math/tex">\mathcal{C}</script></span> is missing "directions" (lacks rank), you can't steer the system to any state.</p>
+<p>Picture a video game controller. If certain buttons are broken, you might not be able to move your character anywhere you want. Similarly, if <span class="arithmatex">\(\mathcal{C}\)</span> is missing "directions" (lacks rank), you can't steer the system to any state.</p>
 <h3 id="how-to-check-controllability">How to check controllability</h3>
 <ol>
-<li>Form <span class="arithmatex"><span class="MathJax_Preview">\mathcal{C}</span><script type="math/tex">\mathcal{C}</script></span>.</li>
+<li>Form <span class="arithmatex">\(\mathcal{C}\)</span>.</li>
 <li>Compute its rank.</li>
 <li>Compare to the number of states.</li>
 </ol>
 <blockquote>
 <p><strong>Example:</strong>
-If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{C}</span><script type="math/tex">\mathcal{C}</script></span> has rank 2 for a 2-state system, you're good. But if it only has rank 1, you can't reach every state.</p>
+If <span class="arithmatex">\(\mathcal{C}\)</span> has rank 2 for a 2-state system, you're good. But if it only has rank 1, you can't reach every state.</p>
 </blockquote>
 <hr />
 <h2 id="113-observability">11.3 Observability</h2>
 <p><strong>Observability</strong> asks: <em>"Can we deduce the internal states from measurements?"</em></p>
 <p>To test this, use the <strong>Observability Matrix</strong>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
-\mathcal{O} = \begin{bmatrix} C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1} \end{bmatrix}
-</div>
-<script type="math/tex; mode=display">
-\mathcal{O} = \begin{bmatrix} C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1} \end{bmatrix}
-</script>
-</div>
+<div class="arithmatex">\[
+\mathcal{O} = \begin{bmatrix} C \\\\ CA \\\\ CA^2 \\\\ \vdots \\\\ CA^{n-1} \end{bmatrix}
+\]</div>
 <ul>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{O}</span><script type="math/tex">\mathcal{O}</script></span> has <strong>full rank</strong>, the system is <strong>observable</strong>.</li>
+<li>If <span class="arithmatex">\(\mathcal{O}\)</span> has <strong>full rank</strong>, the system is <strong>observable</strong>.</li>
 </ul>
 <h3 id="intuitive-view_1">Intuitive View</h3>
 <p>Imagine trying to figure out the position of a hidden car by only watching its shadow. If the light source and shadow don't reveal everything, you're missing vital information — the system is not fully observable.</p>
 <h3 id="how-to-check-observability">How to check observability</h3>
 <ol>
-<li>Form <span class="arithmatex"><span class="MathJax_Preview">\mathcal{O}</span><script type="math/tex">\mathcal{O}</script></span>.</li>
+<li>Form <span class="arithmatex">\(\mathcal{O}\)</span>.</li>
 <li>Compute its rank.</li>
 <li>Compare to the number of states.</li>
 </ol>
@@ -1467,18 +1451,13 @@ If <span class="arithmatex"><span class="MathJax_Preview">\mathcal{C}</span><scr
 <hr />
 <h2 id="115-transfer-function-representation">11.5 Transfer Function Representation</h2>
 <p>While state-space models are great for multiple-input, multiple-output (MIMO) systems, sometimes it's easier to think about how inputs are transformed into outputs <strong>directly</strong>.</p>
-<p>The <strong>Transfer Function</strong> <span class="arithmatex"><span class="MathJax_Preview">G(s)</span><script type="math/tex">G(s)</script></span> relates input to output in the Laplace domain:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>The <strong>Transfer Function</strong> <span class="arithmatex">\(G(s)\)</span> relates input to output in the Laplace domain:</p>
+<div class="arithmatex">\[
 G(s) = C(sI - A)^{-1}B + D
-</div>
-<script type="math/tex; mode=display">
-G(s) = C(sI - A)^{-1}B + D
-</script>
-</div>
+\]</div>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">s</span><script type="math/tex">s</script></span> is a complex variable representing frequency.</li>
-<li><span class="arithmatex"><span class="MathJax_Preview">(sI - A)^{-1}</span><script type="math/tex">(sI - A)^{-1}</script></span> is the resolvent matrix that describes how system dynamics respond to inputs.</li>
+<li><span class="arithmatex">\(s\)</span> is a complex variable representing frequency.</li>
+<li><span class="arithmatex">\((sI - A)^{-1}\)</span> is the resolvent matrix that describes how system dynamics respond to inputs.</li>
 </ul>
 <p><strong>How is this helpful?</strong>
 - Transfer functions give direct frequency response.
@@ -1553,6 +1532,12 @@ D. State Transition Matrix</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

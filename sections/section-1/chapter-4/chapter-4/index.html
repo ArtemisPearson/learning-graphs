@@ -1358,14 +1358,14 @@ These ideas are the keys to understanding <strong>when systems have unique solut
 <p><strong>Definition:</strong><br />
 Vectors are <strong>linearly independent</strong> if <strong>none of them can be written as a combination of the others</strong>.</p>
 <p><strong>Formal Test:</strong><br />
-Vectors <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n </span><script type="math/tex"> \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n </script></span> are independent if the only solution to:
-[
+Vectors <span class="arithmatex">\( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \)</span> are independent if the only solution to:
+$$
 c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_n\mathbf{v}_n = \mathbf{0}
-]
+$$
 is:
-[
+$$
 c_1 = c_2 = \dots = c_n = 0
-]</p>
+$$</p>
 <p><strong>Otherwise</strong>, they are <strong>dependent</strong>.</p>
 <hr />
 <h3 id="intuitive-picture">Intuitive Picture</h3>
@@ -1380,34 +1380,34 @@ Imagine you're giving directions:
 <hr />
 <h3 id="simple-examples">Simple Examples</h3>
 <p><strong>Independent Example:</strong><br />
-In <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}^2</span><script type="math/tex">\mathbb{R}^2</script></span>,
-[
+In <span class="arithmatex">\(\mathbb{R}^2\)</span>,
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-1 \
+1 \\
 0
 \end{bmatrix}, \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-0 \
+0 \\
 1
 \end{bmatrix}
-]
+$$
 are independent — they point along different axes.</p>
 <p><strong>Dependent Example:</strong><br />
-[
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-2 \
+2 \\
 4
 \end{bmatrix}, \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-1 \
+1 \\
 2
 \end{bmatrix}
-]
-are dependent because <span class="arithmatex"><span class="MathJax_Preview"> \mathbf{v}_1 = 2\mathbf{v}_2 </span><script type="math/tex"> \mathbf{v}_1 = 2\mathbf{v}_2 </script></span>.</p>
+$$
+are dependent because <span class="arithmatex">\( \mathbf{v}_1 = 2\mathbf{v}_2 \)</span>.</p>
 <hr />
 <h2 id="42-the-importance-of-linear-independence">4.2 The Importance of Linear Independence</h2>
 <ul>
@@ -1434,30 +1434,30 @@ are dependent because <span class="arithmatex"><span class="MathJax_Preview"> \m
 1. Row reducing it to <strong>Row Echelon Form</strong> or <strong>Reduced Row Echelon Form (RREF)</strong>,
 2. Counting the number of <strong>leading 1s</strong> (pivots).</p>
 <p><strong>Example:</strong></p>
-<p>Matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>:
-[
+<p>Matrix <span class="arithmatex">\(A\)</span>:
+$$
 A =
 \begin{bmatrix}
-1 &amp; 2 &amp; 3 \
-2 &amp; 4 &amp; 6 \
+1 &amp; 2 &amp; 3 \\
+2 &amp; 4 &amp; 6 \\
 3 &amp; 6 &amp; 9
 \end{bmatrix}
-]</p>
+$$</p>
 <p>Row reducing:
-[
+$$
 \begin{bmatrix}
-1 &amp; 2 &amp; 3 \
-0 &amp; 0 &amp; 0 \
+1 &amp; 2 &amp; 3 \\
+0 &amp; 0 &amp; 0 \\
 0 &amp; 0 &amp; 0
 \end{bmatrix}
-]</p>
-<p>Thus, <span class="arithmatex"><span class="MathJax_Preview">\text{rank}(A) = 1</span><script type="math/tex">\text{rank}(A) = 1</script></span>.</p>
+$$</p>
+<p>Thus, <span class="arithmatex">\(\text{rank}(A) = 1\)</span>.</p>
 <hr />
 <h3 id="key-properties-of-rank">Key Properties of Rank</h3>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\text{rank}(A) \leq \min(m,n)</span><script type="math/tex">\text{rank}(A) \leq \min(m,n)</script></span> for an <span class="arithmatex"><span class="MathJax_Preview">m \times n</span><script type="math/tex">m \times n</script></span> matrix.</li>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\text{rank}(A) = n</span><script type="math/tex">\text{rank}(A) = n</script></span> (number of columns), the columns are independent.</li>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\text{rank}(A) = m</span><script type="math/tex">\text{rank}(A) = m</script></span> (number of rows), the rows are independent.</li>
+<li><span class="arithmatex">\(\text{rank}(A) \leq \min(m,n)\)</span> for an <span class="arithmatex">\(m \times n\)</span> matrix.</li>
+<li>If <span class="arithmatex">\(\text{rank}(A) = n\)</span> (number of columns), the columns are independent.</li>
+<li>If <span class="arithmatex">\(\text{rank}(A) = m\)</span> (number of rows), the rows are independent.</li>
 </ul>
 <hr />
 <h2 id="44-row-rank-column-rank">4.4 Row Rank = Column Rank</h2>
@@ -1474,10 +1474,10 @@ Rows and columns "live" in different spaces — yet their structure carries the 
 - <strong>Rank</strong> (number of independent columns),
 - <strong>Nullity</strong> (dimension of the null space, i.e., number of free variables).</p>
 <p><strong>Theorem:</strong>
-[
+$$
 \text{rank}(A) + \text{nullity}(A) = n
-]
-where <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> = number of columns.</p>
+$$
+where <span class="arithmatex">\(n\)</span> = number of columns.</p>
 <p><strong>Meaning:</strong><br />
 Every variable in a system either:
 - Contributes to a pivot (making the system more constrained), or
@@ -1507,26 +1507,26 @@ We'll soon build a <strong>geometric view of projections and orthogonality</stro
 <p>Mastering rank and independence is essential for unlocking the deeper structure hidden inside linear systems and transformations!</p>
 <hr />
 <h1 id="quiz">🧠 Quiz</h1>
+<p>If a <span class="arithmatex">\(4 \times 5\)</span> matrix has rank 3, what is the dimension of its null space?</p>
 <div class="upper-alpha">
-<p>If a <span class="arithmatex"><span class="MathJax_Preview">4 \times 5</span><script type="math/tex">4 \times 5</script></span> matrix has rank 3, what is the dimension of its null space?
-A. 1
-B. 2
-C. 3
-D. 5</p>
+<p>A. 1</p>
+<p>B. 2</p>
+<p>C. 3</p>
+<p>D. 5</p>
 </div>
 <details class="question">
 <summary>Show Answer</summary>
 <p>The correct answer is <strong>B</strong>.<br />
 By the Rank-Nullity Theorem:<br />
-[
+$$
 \text{rank} + \text{nullity} = \text{number of columns}
-]
+$$
 So:<br />
-[
+$$
 3 + \text{nullity} = 5
 \quad \Rightarrow \quad
 \text{nullity} = 2
-]</p>
+$$</p>
 </details>
 
 
@@ -1578,6 +1578,12 @@ So:<br />
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

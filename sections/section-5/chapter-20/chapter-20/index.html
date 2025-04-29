@@ -1468,26 +1468,21 @@
 <h3 id="linear-svms">Linear SVMs</h3>
 <p>In simple SVMs, we seek a hyperplane (a line in 2D, a plane in 3D, etc.) that best separates data into two classes by maximizing the margin between them.</p>
 <p>Mathematically, the hyperplane is defined as:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 w^T x + b = 0
-</div>
-<script type="math/tex; mode=display">
-w^T x + b = 0
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> = weight vector (normal to the hyperplane)
-- <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> = bias</p>
+- <span class="arithmatex">\(w\)</span> = weight vector (normal to the hyperplane)
+- <span class="arithmatex">\(b\)</span> = bias</p>
 <p>Optimization aims to maximize the margin while correctly classifying as many points as possible.</p>
 <h3 id="when-data-is-nonlinear">When Data is Nonlinear</h3>
 <p>Often, data isn't linearly separable. To fix this, we can map data into a <strong>higher-dimensional space</strong> where separation is easier. But computing these higher-dimensional vectors explicitly is expensive!</p>
 <h3 id="enter-the-kernel-trick">Enter the Kernel Trick</h3>
-<p>Rather than computing transformations explicitly, the <strong>kernel trick</strong> computes the <strong>inner products</strong> in the higher-dimensional space directly using a <strong>kernel function</strong> <span class="arithmatex"><span class="MathJax_Preview">k(x, y)</span><script type="math/tex">k(x, y)</script></span>.</p>
+<p>Rather than computing transformations explicitly, the <strong>kernel trick</strong> computes the <strong>inner products</strong> in the higher-dimensional space directly using a <strong>kernel function</strong> <span class="arithmatex">\(k(x, y)\)</span>.</p>
 <p>Examples of kernels:
-- <strong>Linear Kernel</strong>: <span class="arithmatex"><span class="MathJax_Preview">k(x,y) = x^T y</span><script type="math/tex">k(x,y) = x^T y</script></span>
-- <strong>Polynomial Kernel</strong>: <span class="arithmatex"><span class="MathJax_Preview">k(x,y) = (x^T y + c)^d</span><script type="math/tex">k(x,y) = (x^T y + c)^d</script></span>
-- <strong>RBF (Gaussian) Kernel</strong>: <span class="arithmatex"><span class="MathJax_Preview">k(x,y) = \exp\left(-\gamma \|x-y\|^2\right)</span><script type="math/tex">k(x,y) = \exp\left(-\gamma \|x-y\|^2\right)</script></span></p>
+- <strong>Linear Kernel</strong>: <span class="arithmatex">\(k(x,y) = x^T y\)</span>
+- <strong>Polynomial Kernel</strong>: <span class="arithmatex">\(k(x,y) = (x^T y + c)^d\)</span>
+- <strong>RBF (Gaussian) Kernel</strong>: <span class="arithmatex">\(k(x,y) = \exp\left(-\gamma \|x-y\|^2\right)\)</span></p>
 <p><strong>Key Insight:</strong>
 You never need to know the mapping explicitly; you only need the inner products!</p>
 <div class="admonition example">
@@ -1497,16 +1492,11 @@ You never need to know the mapping explicitly; you only need the inner products!
 <h2 id="2-positive-semidefinite-kernels-and-gram-matrices">2. Positive Semidefinite Kernels and Gram Matrices</h2>
 <h3 id="positive-semidefinite-psd-kernels">Positive Semidefinite (PSD) Kernels</h3>
 <p>A kernel function must generate a <strong>positive semidefinite Gram matrix</strong>:
-- A matrix <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> where each entry <span class="arithmatex"><span class="MathJax_Preview">K_{ij} = k(x_i, x_j)</span><script type="math/tex">K_{ij} = k(x_i, x_j)</script></span>.
-- Positive semidefinite means that for any vector <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+- A matrix <span class="arithmatex">\(K\)</span> where each entry <span class="arithmatex">\(K_{ij} = k(x_i, x_j)\)</span>.
+- Positive semidefinite means that for any vector <span class="arithmatex">\(z\)</span>:</p>
+<div class="arithmatex">\[
 z^T K z \geq 0
-</div>
-<script type="math/tex; mode=display">
-z^T K z \geq 0
-</script>
-</div>
+\]</div>
 <h3 id="why-psd-matters">Why PSD Matters</h3>
 <ul>
 <li>Ensures the kernel represents a valid inner product.</li>
@@ -1520,28 +1510,18 @@ PSD matrices have <strong>non-negative eigenvalues</strong>, linking back to you
 - <strong>Collaborative Filtering</strong> predicts your preferences based on patterns in your and others' ratings.</p>
 <p>This leads to a large, partially-filled <strong>user-item matrix</strong> where entries are known ratings.</p>
 <h3 id="matrix-factorization">Matrix Factorization</h3>
-<p>The idea is to factorize the user-item matrix <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> into two low-rank matrices:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<p>The idea is to factorize the user-item matrix <span class="arithmatex">\(M\)</span> into two low-rank matrices:</p>
+<div class="arithmatex">\[
 M \approx U V^T
-</div>
-<script type="math/tex; mode=display">
-M \approx U V^T
-</script>
-</div>
+\]</div>
 <p>where:
-- <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> = user factors (preferences)
-- <span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span> = item factors (attributes)</p>
-<p>The product <span class="arithmatex"><span class="MathJax_Preview">U V^T</span><script type="math/tex">U V^T</script></span> reconstructs known ratings and fills in the missing ones.</p>
+- <span class="arithmatex">\(U\)</span> = user factors (preferences)
+- <span class="arithmatex">\(V\)</span> = item factors (attributes)</p>
+<p>The product <span class="arithmatex">\(U V^T\)</span> reconstructs known ratings and fills in the missing ones.</p>
 <p>Optimization typically minimizes the reconstruction error:</p>
-<div class="arithmatex">
-<div class="MathJax_Preview">
+<div class="arithmatex">\[
 \min_{U, V} \sum_{(i,j) \in \text{known}} (M_{ij} - U_i^T V_j)^2
-</div>
-<script type="math/tex; mode=display">
-\min_{U, V} \sum_{(i,j) \in \text{known}} (M_{ij} - U_i^T V_j)^2
-</script>
-</div>
+\]</div>
 <h2 id="4-eigenfaces-for-face-recognition">4. Eigenfaces for Face Recognition</h2>
 <h3 id="eigenfaces-method">Eigenfaces Method</h3>
 <ul>
@@ -1624,6 +1604,12 @@ D. SVD factorization</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

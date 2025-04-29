@@ -1583,14 +1583,14 @@
 <hr />
 <h2 id="71-matrix-inverse-and-solving-systems">7.1 Matrix Inverse and Solving Systems</h2>
 <h3 id="concept">Concept</h3>
-<p>A matrix inverse, much like the reciprocal of a number, <strong>undoes</strong> the action of a matrix. If a matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is invertible, we can solve <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x} = \mathbf{b}</span><script type="math/tex">A\mathbf{x} = \mathbf{b}</script></span> by computing <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x} = A^{-1}\mathbf{b}</span><script type="math/tex">\mathbf{x} = A^{-1}\mathbf{b}</script></span>.</p>
+<p>A matrix inverse, much like the reciprocal of a number, <strong>undoes</strong> the action of a matrix. If a matrix <span class="arithmatex">\(A\)</span> is invertible, we can solve <span class="arithmatex">\(A\mathbf{x} = \mathbf{b}\)</span> by computing <span class="arithmatex">\(\mathbf{x} = A^{-1}\mathbf{b}\)</span>.</p>
 <h3 id="how-and-why">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> It gives a direct way to solve equations.</li>
-<li><strong>How?</strong> If <span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span> exists, it satisfies <span class="arithmatex"><span class="MathJax_Preview">A^{-1}A = I</span><script type="math/tex">A^{-1}A = I</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">I</span><script type="math/tex">I</script></span> is the identity matrix.</li>
+<li><strong>How?</strong> If <span class="arithmatex">\(A^{-1}\)</span> exists, it satisfies <span class="arithmatex">\(A^{-1}A = I\)</span>, where <span class="arithmatex">\(I\)</span> is the identity matrix.</li>
 </ul>
 <blockquote>
-<p><strong>Warning:</strong> Computing <span class="arithmatex"><span class="MathJax_Preview">A^{-1}</span><script type="math/tex">A^{-1}</script></span> is computationally expensive and numerically unstable for large matrices. In practice, we rarely compute the inverse explicitly!</p>
+<p><strong>Warning:</strong> Computing <span class="arithmatex">\(A^{-1}\)</span> is computationally expensive and numerically unstable for large matrices. In practice, we rarely compute the inverse explicitly!</p>
 </blockquote>
 <details class="tip">
 <summary>Visual Metaphor</summary>
@@ -1601,8 +1601,8 @@
 <h3 id="concept_1">Concept</h3>
 <p>The <strong>determinant</strong> of a matrix gives a scalar value that indicates whether the matrix is invertible and how it transforms space.</p>
 <ul>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\text{det}(A) = 0</span><script type="math/tex">\text{det}(A) = 0</script></span>, the matrix <strong>is not invertible</strong> (it "flattens" space).</li>
-<li>If <span class="arithmatex"><span class="MathJax_Preview">\text{det}(A) \neq 0</span><script type="math/tex">\text{det}(A) \neq 0</script></span>, the matrix <strong>is invertible</strong>.</li>
+<li>If <span class="arithmatex">\(\text{det}(A) = 0\)</span>, the matrix <strong>is not invertible</strong> (it "flattens" space).</li>
+<li>If <span class="arithmatex">\(\text{det}(A) \neq 0\)</span>, the matrix <strong>is invertible</strong>.</li>
 </ul>
 <h3 id="how-and-why_1">How and Why</h3>
 <ul>
@@ -1611,16 +1611,16 @@
 </ul>
 <details class="example">
 <summary>Example</summary>
-<p>The determinant of a 2x2 matrix <span class="arithmatex"><span class="MathJax_Preview">\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}</span><script type="math/tex">\begin{bmatrix} a & b \\ c & d \end{bmatrix}</script></span> is <span class="arithmatex"><span class="MathJax_Preview">ad - bc</span><script type="math/tex">ad - bc</script></span>.</p>
+<p>The determinant of a 2x2 matrix <span class="arithmatex">\(\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}\)</span> is <span class="arithmatex">\(ad - bc\)</span>.</p>
 </details>
 <hr />
 <h2 id="73-cramers-rule">7.3 Cramer's Rule</h2>
 <h3 id="concept_2">Concept</h3>
-<p><strong>Cramer's Rule</strong> expresses each variable in <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x} = \mathbf{b}</span><script type="math/tex">A\mathbf{x} = \mathbf{b}</script></span> as a ratio of determinants.</p>
+<p><strong>Cramer's Rule</strong> expresses each variable in <span class="arithmatex">\(A\mathbf{x} = \mathbf{b}\)</span> as a ratio of determinants.</p>
 <h3 id="how-and-why_2">How and Why</h3>
 <ul>
 <li><strong>Why?</strong> It provides a formulaic method for small systems.</li>
-<li><strong>How?</strong> Replace the column of <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> corresponding to the unknown with <span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}</span><script type="math/tex">\mathbf{b}</script></span>, compute the determinant, and divide by <span class="arithmatex"><span class="MathJax_Preview">\det(A)</span><script type="math/tex">\det(A)</script></span>.</li>
+<li><strong>How?</strong> Replace the column of <span class="arithmatex">\(A\)</span> corresponding to the unknown with <span class="arithmatex">\(\mathbf{b}\)</span>, compute the determinant, and divide by <span class="arithmatex">\(\det(A)\)</span>.</li>
 </ul>
 <blockquote>
 <p><strong>Warning:</strong> Cramer's Rule is <strong>not practical</strong> for large systems because determinant computation grows factorially with matrix size.</p>
@@ -1658,17 +1658,17 @@
 <p>Matrix factorizations break down a complicated matrix into simpler, structured components that make solving systems faster and more stable.</p>
 <h3 id="lu-decomposition">LU Decomposition</h3>
 <ul>
-<li><strong>Concept:</strong> Express <span class="arithmatex"><span class="MathJax_Preview">A = LU</span><script type="math/tex">A = LU</script></span> where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is lower triangular, <span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span> is upper triangular.</li>
-<li><strong>Application:</strong> Solves <span class="arithmatex"><span class="MathJax_Preview">A\mathbf{x} = \mathbf{b}</span><script type="math/tex">A\mathbf{x} = \mathbf{b}</script></span> via two easier systems: <span class="arithmatex"><span class="MathJax_Preview">L\mathbf{y} = \mathbf{b}</span><script type="math/tex">L\mathbf{y} = \mathbf{b}</script></span>, then <span class="arithmatex"><span class="MathJax_Preview">U\mathbf{x} = \mathbf{y}</span><script type="math/tex">U\mathbf{x} = \mathbf{y}</script></span>.</li>
+<li><strong>Concept:</strong> Express <span class="arithmatex">\(A = LU\)</span> where <span class="arithmatex">\(L\)</span> is lower triangular, <span class="arithmatex">\(U\)</span> is upper triangular.</li>
+<li><strong>Application:</strong> Solves <span class="arithmatex">\(A\mathbf{x} = \mathbf{b}\)</span> via two easier systems: <span class="arithmatex">\(L\mathbf{y} = \mathbf{b}\)</span>, then <span class="arithmatex">\(U\mathbf{x} = \mathbf{y}\)</span>.</li>
 </ul>
 <h3 id="qr-decomposition">QR Decomposition</h3>
 <ul>
-<li><strong>Concept:</strong> Express <span class="arithmatex"><span class="MathJax_Preview">A = QR</span><script type="math/tex">A = QR</script></span> where <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> is orthogonal and <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> is upper triangular.</li>
+<li><strong>Concept:</strong> Express <span class="arithmatex">\(A = QR\)</span> where <span class="arithmatex">\(Q\)</span> is orthogonal and <span class="arithmatex">\(R\)</span> is upper triangular.</li>
 <li><strong>Application:</strong> Important in solving least-squares problems and eigenvalue computation.</li>
 </ul>
 <h3 id="cholesky-decomposition">Cholesky Decomposition</h3>
 <ul>
-<li><strong>Concept:</strong> For symmetric positive definite matrices, <span class="arithmatex"><span class="MathJax_Preview">A = LL^T</span><script type="math/tex">A = LL^T</script></span> where <span class="arithmatex"><span class="MathJax_Preview">L</span><script type="math/tex">L</script></span> is lower triangular.</li>
+<li><strong>Concept:</strong> For symmetric positive definite matrices, <span class="arithmatex">\(A = LL^T\)</span> where <span class="arithmatex">\(L\)</span> is lower triangular.</li>
 <li><strong>Application:</strong> Twice as efficient as LU decomposition for these special matrices.</li>
 </ul>
 <details class="info">
@@ -1748,6 +1748,12 @@ D. RREF</p>
     
     
       <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
