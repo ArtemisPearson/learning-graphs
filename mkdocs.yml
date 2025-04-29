@@ -1,3 +1,7 @@
+markdown_extensions:
+  - md_in_html
+extra_css:
+  - css/extra.css
 site_name: Intelligent Textbook for Applied Linear Algebra
 repo_url: https://github.com/ArtemisPearson/learning-graphs
 nav:
