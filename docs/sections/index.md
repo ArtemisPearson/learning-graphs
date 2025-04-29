@@ -1,13 +1,21 @@
-# List of Chapters
+# List of Sections
 
-## Chapter 1
+## Section 1
 
-[Open Chapter 1](chapter-1.md)
+[Open Section 1](section-1\section-1.md)
 
-## Chapter 2
+## Section 2
 
-[Open Chapter 2](chapter-3.md)
+[Open Section 2](section-2\section-2.md)
 
-## Chapter 1
+## Section 3
 
-[Open Chapter 3](chapter-3.md)
+[Open Section 3](section-3\section-3.md)
+
+## Section 4
+
+[Open Section 4](section-4\section-4.md)
+
+## Section 5
+
+[Open Section 5](section-5\section-5.md)
