@@ -9,20 +9,22 @@
       
       
       
+        <link rel="prev" href="../../chapter-11/chapter-11/">
       
-        <link rel="next" href="sections/">
+      
+        <link rel="next" href="../../chapter-13/chapter-13/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>Intelligent Textbook for Applied Linear Algebra</title>
+        <title>Chapter 12 - Intelligent Textbook for Applied Linear Algebra</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
       
       
 
@@ -41,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="css/extra.css">
+      <link rel="stylesheet" href="../../../../css/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#course-title-applied-linear-algebra-for-computer-science-and-electrical-engineering" class="md-skip">
+        <a href="#chapter-12-system-stability-and-feedback" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Intelligent Textbook for Applied Linear Algebra" class="md-header__button md-logo" aria-label="Intelligent Textbook for Applied Linear Algebra" data-md-component="logo">
+    <a href="../../../.." title="Intelligent Textbook for Applied Linear Algebra" class="md-header__button md-logo" aria-label="Intelligent Textbook for Applied Linear Algebra" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              Chapter 12
             
           </span>
         </div>
@@ -185,7 +187,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Intelligent Textbook for Applied Linear Algebra" class="md-nav__button md-logo" aria-label="Intelligent Textbook for Applied Linear Algebra" data-md-component="logo">
+    <a href="../../../.." title="Intelligent Textbook for Applied Linear Algebra" class="md-nav__button md-logo" aria-label="Intelligent Textbook for Applied Linear Algebra" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -212,30 +214,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,173 +226,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#cognitive-structure-based-on-blooms-taxonomy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cognitive Structure (Based on Bloom’s Taxonomy)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Cognitive Structure (Based on Bloom’s Taxonomy)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-remember" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Remember
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-understand" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Understand
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-apply" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Apply
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-analyze" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Analyze
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-evaluate" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Evaluate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-create" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Create
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#generative-ai-a-key-learning-partner" class="md-nav__link">
-    <span class="md-ellipsis">
-      Generative AI: A Key Learning Partner
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Generative AI: A Key Learning Partner">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#metaphors-and-analogies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metaphors and Analogies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stories-and-lessons" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stories and Lessons
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#content-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content Generation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulations-and-animations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulations and Animations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-activities-and-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning Activities and Projects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assessment-and-feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assessment and Feedback
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-take-this-course" class="md-nav__link">
-    <span class="md-ellipsis">
-      Why Take This Course?
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -419,17 +234,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -443,7 +260,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             List of Chapters
@@ -457,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/section-1/" class="md-nav__link">
+      <a href="../../../section-1/section-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-1/chapter-1/" class="md-nav__link">
+      <a href="../../../section-1/chapter-1/chapter-1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-2/chapter-2/" class="md-nav__link">
+      <a href="../../../section-1/chapter-2/chapter-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-3/chapter-3/" class="md-nav__link">
+      <a href="../../../section-1/chapter-3/chapter-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -597,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-4/chapter-4/" class="md-nav__link">
+      <a href="../../../section-1/chapter-4/chapter-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-5/chapter-5/" class="md-nav__link">
+      <a href="../../../section-1/chapter-5/chapter-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-1/chapter-6/chapter-6/" class="md-nav__link">
+      <a href="../../../section-1/chapter-6/chapter-6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-2/section-2/" class="md-nav__link">
+      <a href="../../../section-2/section-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-2/chapter-7/chapter-7/" class="md-nav__link">
+      <a href="../../../section-2/chapter-7/chapter-7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -745,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-2/chapter-8/chapter-8/" class="md-nav__link">
+      <a href="../../../section-2/chapter-8/chapter-8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -766,7 +583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-2/chapter-9/chapter-9/" class="md-nav__link">
+      <a href="../../../section-2/chapter-9/chapter-9/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -787,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-2/chapter-10/chapter-10/" class="md-nav__link">
+      <a href="../../../section-2/chapter-10/chapter-10/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -813,17 +630,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
         
           
           <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
@@ -837,7 +656,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Section 3
@@ -851,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-3/section-3/" class="md-nav__link">
+      <a href="../../section-3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -872,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-3/chapter-11/chapter-11/" class="md-nav__link">
+      <a href="../../chapter-11/chapter-11/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -890,10 +709,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="sections/section-3/chapter-12/chapter-12/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Chapter 12
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -902,6 +741,173 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-stability-of-state-space-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 Stability of State-Space Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1 Stability of State-Space Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stability-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stability Conditions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-eigenvalues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Eigenvalues?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-feedback-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.2 Feedback Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.2 Feedback Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-feedback-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Feedback Works
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-pole-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.3 Pole Placement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.3 Pole Placement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-connects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it connects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-linear-quadratic-regulator-lqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.4 Linear Quadratic Regulator (LQR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.4 Linear Quadratic Regulator (LQR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-lqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why use LQR?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-svd-applications-in-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.5 SVD Applications in Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.5 SVD Applications in Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-fits-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it fits in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -914,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-3/chapter-13/chapter-13/" class="md-nav__link">
+      <a href="../../chapter-13/chapter-13/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -978,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-4/section-4/" class="md-nav__link">
+      <a href="../../../section-4/section-4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -999,7 +1005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-4/chapter-14/chapter-14/" class="md-nav__link">
+      <a href="../../../section-4/chapter-14/chapter-14/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1020,7 +1026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-4/chapter-15/chapter-15/" class="md-nav__link">
+      <a href="../../../section-4/chapter-15/chapter-15/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-4/chapter-16/chapter-16/" class="md-nav__link">
+      <a href="../../../section-4/chapter-16/chapter-16/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1105,7 +1111,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/section-5/" class="md-nav__link">
+      <a href="../../../section-5/section-5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1126,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/chapter-17/chapter-17/" class="md-nav__link">
+      <a href="../../../section-5/chapter-17/chapter-17/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1147,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/chapter-18/chapter-18/" class="md-nav__link">
+      <a href="../../../section-5/chapter-18/chapter-18/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1168,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/chapter-19/chapter-19/" class="md-nav__link">
+      <a href="../../../section-5/chapter-19/chapter-19/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1189,7 +1195,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/chapter-20/chapter-20/" class="md-nav__link">
+      <a href="../../../section-5/chapter-20/chapter-20/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1210,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sections/section-5/chapter-21/chapter-21/" class="md-nav__link">
+      <a href="../../../section-5/chapter-21/chapter-21/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1266,64 +1272,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#cognitive-structure-based-on-blooms-taxonomy" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Cognitive Structure (Based on Bloom’s Taxonomy)
+      Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Cognitive Structure (Based on Bloom’s Taxonomy)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-stability-of-state-space-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.1 Stability of State-Space Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.1 Stability of State-Space Systems">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-remember" class="md-nav__link">
+  <a href="#stability-conditions" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Remember
+      Stability Conditions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-understand" class="md-nav__link">
+  <a href="#why-eigenvalues" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Understand
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-apply" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Apply
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-analyze" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Analyze
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-evaluate" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Evaluate
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-create" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Create
+      Why Eigenvalues?
     </span>
   </a>
   
@@ -1335,64 +1314,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#generative-ai-a-key-learning-partner" class="md-nav__link">
+  <a href="#122-feedback-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Generative AI: A Key Learning Partner
+      12.2 Feedback Control
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Generative AI: A Key Learning Partner">
+    <nav class="md-nav" aria-label="12.2 Feedback Control">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#metaphors-and-analogies" class="md-nav__link">
+  <a href="#why-feedback-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Metaphors and Analogies
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stories-and-lessons" class="md-nav__link">
-    <span class="md-ellipsis">
-      Stories and Lessons
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#content-generation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Content Generation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#simulations-and-animations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Simulations and Animations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#learning-activities-and-projects" class="md-nav__link">
-    <span class="md-ellipsis">
-      Learning Activities and Projects
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#assessment-and-feedback" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assessment and Feedback
+      Why Feedback Works
     </span>
   </a>
   
@@ -1404,11 +1338,83 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-take-this-course" class="md-nav__link">
+  <a href="#123-pole-placement" class="md-nav__link">
     <span class="md-ellipsis">
-      Why Take This Course?
+      12.3 Pole Placement
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="12.3 Pole Placement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-connects" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it connects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-linear-quadratic-regulator-lqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.4 Linear Quadratic Regulator (LQR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.4 Linear Quadratic Regulator (LQR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-use-lqr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why use LQR?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-svd-applications-in-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.5 SVD Applications in Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12.5 SVD Applications in Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-fits-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it fits in
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1430,84 +1436,132 @@
   
 
 
-<h1 id="course-title-applied-linear-algebra-for-computer-science-and-electrical-engineering"><strong>Course Title: Applied Linear Algebra for Computer Science and Electrical Engineering</strong></h1>
-<p><strong>Course Description</strong></p>
-<p>In <em>Applied Linear Algebra</em>, you won’t just learn matrices and vectors—you'll <strong>experience</strong> them in action. This course empowers undergraduate students in <strong>Computer Science</strong> and <strong>Electrical Engineering</strong> to develop a deep, functional understanding of linear algebra’s essential role in modern technology, from <strong>state-space control systems</strong> to <strong>machine learning</strong> architectures.</p>
-<p>Using <strong>Generative AI</strong> as a dynamic teaching partner, the course transforms learning into a highly personalized, interactive journey. AI tools will craft vivid metaphors, generate immersive stories, create customized content, power simulations, design scaffolded projects, and deliver individualized assessments to optimize every student's growth.</p>
+<h1 id="chapter-12-system-stability-and-feedback">Chapter 12: System Stability and Feedback</h1>
+<h2 id="overview">Overview</h2>
+<p>Building upon Chapter 11's foundation in state-space modeling, this chapter dives into ensuring <strong>systems not only move but behave well over time</strong>. We will explore how <strong>stability</strong> and <strong>feedback</strong> strategies are designed using linear algebra. These ideas are essential — a controllable system that is unstable is like a rocket ship you can steer but can't keep from exploding!</p>
+<p>Understanding how eigenvalues (from earlier eigenanalysis topics) control system behavior will become your main tool here.</p>
 <hr />
-<h2 id="cognitive-structure-based-on-blooms-taxonomy"><strong>Cognitive Structure (Based on Bloom’s Taxonomy)</strong></h2>
-<h3 id="1-remember"><strong>1. Remember</strong></h3>
+<h2 id="121-stability-of-state-space-systems">12.1 Stability of State-Space Systems</h2>
+<p>In simple terms, a <strong>stable system</strong> tends to return to equilibrium after a disturbance.</p>
+<p>For a continuous-time system:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{x}(t) = Ax(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{x}(t) = Ax(t)
+</script>
+</div>
+<p>the stability depends entirely on the <strong>eigenvalues of the matrix A</strong>.</p>
+<h3 id="stability-conditions">Stability Conditions</h3>
 <ul>
-<li><strong>Knowledge Goals</strong>: Recall fundamental concepts such as vector spaces, linear transformations, eigenvalues, and matrix decompositions.</li>
-<li><strong>AI Enhancement</strong>: </li>
-<li>Generative AI will produce quick-reference analogies, such as comparing a vector basis to different musical scales enabling a song's creation.</li>
-<li>Interactive AI quizzes will reinforce basic terminology and formulae.</li>
+<li><strong>Stable</strong>: All eigenvalues have negative real parts.</li>
+<li><strong>Unstable</strong>: Any eigenvalue has a positive real part.</li>
+<li><strong>Marginally Stable</strong>: Eigenvalues are purely imaginary (on the imaginary axis), and no repeated eigenvalues.</li>
 </ul>
-<h3 id="2-understand"><strong>2. Understand</strong></h3>
-<ul>
-<li><strong>Knowledge Goals</strong>: Explain how linear algebra models electrical systems, graphics transformations, and data structures.</li>
-<li><strong>AI Enhancement</strong>:</li>
-<li>AI-generated <strong>metaphors</strong> (e.g., visualizing range spaces as "pathways" in a robot's movement grid) will make abstract ideas intuitive.</li>
-<li>AI-led <strong>narrative lessons</strong> will recount the evolution of linear algebra through the eyes of historical engineers like Claude Shannon and Emmy Noether.</li>
-</ul>
-<h3 id="3-apply"><strong>3. Apply</strong></h3>
-<ul>
-<li><strong>Skill Goals</strong>: Solve real-world problems by implementing matrix operations, least squares solutions, and eigenvalue analyses.</li>
-<li><strong>AI Enhancement</strong>:</li>
-<li>AI will create <strong>custom practice problems</strong> based on each student’s performance, ensuring targeted skill-building.</li>
-<li>Walkthroughs for matrix manipulations (like LU decomposition) will adapt in complexity based on student mastery.</li>
-</ul>
-<h3 id="4-analyze"><strong>4. Analyze</strong></h3>
-<ul>
-<li><strong>Skill Goals</strong>: Deconstruct systems into matrix models, diagnose system behaviors using eigenstructure, and identify patterns in machine learning datasets.</li>
-<li><strong>AI Enhancement</strong>:</li>
-<li><strong>Interactive simulations</strong> will allow students to model control systems or PCA (Principal Component Analysis) workflows, adjusting inputs and observing outcomes in real-time.</li>
-<li>AI will support <strong>animated breakdowns</strong> of complex processes (e.g., illustrating how matrix rank impacts the solvability of a system).</li>
-</ul>
-<h3 id="5-evaluate"><strong>5. Evaluate</strong></h3>
-<ul>
-<li><strong>Skill Goals</strong>: Critique different modeling approaches, optimize solutions for stability or efficiency, and assess robustness in electrical systems and ML models.</li>
-<li><strong>AI Enhancement</strong>:</li>
-<li>AI-driven <strong>formative assessments</strong> will present alternative problem-solving strategies and prompt students to critique them, encouraging reflective thinking.</li>
-<li>Personalized feedback will guide students to iterate and improve their work.</li>
-</ul>
-<h3 id="6-create"><strong>6. Create</strong></h3>
-<ul>
-<li><strong>Skill Goals</strong>: Design novel applications using linear algebra, such as building a predictive algorithm or engineering a feedback control circuit.</li>
-<li><strong>AI Enhancement</strong>:</li>
-<li><strong>Project Generation Engine</strong>: AI will suggest scaffolded project ideas (e.g., "Design a machine learning model to classify power grid failures") based on student interests and proficiency.</li>
-<li>Ongoing <strong>AI feedback loops</strong> will nurture idea refinement and critical problem-solving at each project milestone.</li>
-</ul>
+<h3 id="why-eigenvalues">Why Eigenvalues?</h3>
+<p>Each eigenvalue corresponds to a natural mode of the system. If the real part of an eigenvalue is positive, it describes a mode that grows exponentially over time — leading to instability.</p>
+<blockquote>
+<p><strong>Tip:</strong> Think of eigenvalues as "behavior seeds" planted inside the system. If they are healthy (negative real parts), the system calms down. If they are poisonous (positive real parts), the system spirals out of control.</p>
+</blockquote>
 <hr />
-<h2 id="generative-ai-a-key-learning-partner"><strong>Generative AI: A Key Learning Partner</strong></h2>
-<h3 id="metaphors-and-analogies"><strong>Metaphors and Analogies</strong></h3>
-<p>AI will weave fresh metaphors to translate mathematical structures into relatable concepts. Imagine eigenvectors described as "hidden rivers" guiding water (data) through landscapes (systems), enabling intuition to bridge to formal understanding.</p>
-<h3 id="stories-and-lessons"><strong>Stories and Lessons</strong></h3>
-<p>Weekly AI-generated episodes will explore the journeys of pioneering figures, framing linear algebra’s historical breakthroughs in captivating, story-driven contexts.</p>
-<h3 id="content-generation"><strong>Content Generation</strong></h3>
-<p>AI will craft:
-- <strong>Real-time quizzes</strong> matched to students’ current needs,
-- <strong>Step-by-step walkthroughs</strong> of problem solutions,
-- <strong>Dynamic worksheets</strong> for matrix computations and system analysis.</p>
-<h3 id="simulations-and-animations"><strong>Simulations and Animations</strong></h3>
-<p>Students will:
-- Manipulate <strong>dynamic visual models</strong> of matrix transformations.
-- Experiment with <strong>state-space representations</strong> in simulated circuits or control systems.
-- Visualize eigenvalue movements during system perturbations.</p>
-<h3 id="learning-activities-and-projects"><strong>Learning Activities and Projects</strong></h3>
-<p>Students will engage with AI-suggested challenges such as:
-- <strong>Designing circuit feedback systems</strong> modeled through state-space equations.
-- <strong>Engineering simple neural network layers</strong> built with matrix operations.
-AI will guide students with <strong>scaffolded support</strong> and <strong>instant feedback</strong> that adapts based on performance.</p>
-<h3 id="assessment-and-feedback"><strong>Assessment and Feedback</strong></h3>
-<p>Going beyond traditional exams, AI will:
-- Track <strong>individual progress</strong> against course objectives,
-- Provide <strong>reflective prompts</strong> for students to self-assess their learning,
-- Recommend <strong>iterative exercises</strong> to build resilience and problem-solving expertise.</p>
+<h2 id="122-feedback-control">12.2 Feedback Control</h2>
+<p>Sometimes, a system isn't stable by itself — but we can <strong>add feedback</strong> to stabilize it!</p>
+<p>Feedback means using the output (or state) to influence the input.</p>
+<p>A simple <strong>state feedback control law</strong> is:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+ u(t) = -Kx(t)
+</div>
+<script type="math/tex; mode=display">
+ u(t) = -Kx(t)
+</script>
+</div>
+<p>where <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> is the <strong>feedback gain matrix</strong>.</p>
+<p>Substituting this into the state equation gives:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\dot{x}(t) = (A - BK)x(t)
+</div>
+<script type="math/tex; mode=display">
+\dot{x}(t) = (A - BK)x(t)
+</script>
+</div>
+<h3 id="why-feedback-works">Why Feedback Works</h3>
+<p>By choosing <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> wisely, we modify the system matrix from <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> to <span class="arithmatex"><span class="MathJax_Preview">A - BK</span><script type="math/tex">A - BK</script></span>. This new matrix can have <strong>different eigenvalues</strong>, meaning we can <em>move</em> the natural behaviors of the system toward stability.</p>
 <hr />
-<h2 id="why-take-this-course"><strong>Why Take This Course?</strong></h2>
-<p>By the end of <em>Applied Linear Algebra</em>, you will not only <strong>understand</strong> the core principles—you will have <strong>applied</strong> them to build models, <strong>analyzed</strong> their performance, <strong>evaluated</strong> different approaches, and <strong>created</strong> tangible solutions to real-world problems in <strong>Computer Science</strong> and <strong>Electrical Engineering</strong>.</p>
-<p>With <strong>Generative AI</strong> as your collaborative guide, you’ll experience a learning journey that’s <strong>personalized</strong>, <strong>engaging</strong>, and <strong>empowering</strong>—preparing you for the challenges of advanced technologies and innovation-driven careers.</p>
+<h2 id="123-pole-placement">12.3 Pole Placement</h2>
+<p><strong>Pole placement</strong> is the art of designing <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> so that the closed-loop system <span class="arithmatex"><span class="MathJax_Preview">A - BK</span><script type="math/tex">A - BK</script></span> has desired eigenvalues (poles).</p>
+<h3 id="procedure">Procedure</h3>
+<ol>
+<li>Decide where you want the eigenvalues (e.g., all with large negative real parts for fast decay).</li>
+<li>Solve for <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> that achieves those eigenvalues.</li>
+</ol>
+<p><strong>Key Requirement:</strong>
+- The system must be <strong>controllable</strong> (see Chapter 11) to place poles arbitrarily.</p>
+<h3 id="how-it-connects">How it connects</h3>
+<p>Remember: eigenvalues were first studied in basic matrix theory. Now, they determine real-world system behavior, and we actively design matrices to control them!</p>
+<blockquote>
+<p><strong>Example:</strong>
+If you want a motor to settle to rest quickly after a bump, you design <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> to place poles far into the left half-plane.</p>
+</blockquote>
+<hr />
+<h2 id="124-linear-quadratic-regulator-lqr">12.4 Linear Quadratic Regulator (LQR)</h2>
+<p>Sometimes, just placing poles isn't enough — we want to <strong>optimize</strong> performance by balancing goals:
+- Make the system respond quickly
+- Avoid using huge control inputs (which could burn out hardware)</p>
+<p>The <strong>Linear Quadratic Regulator (LQR)</strong> solves this optimization problem:</p>
+<p>Minimize the cost function:</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J = \int_0^\infty \left( x(t)^T Q x(t) + u(t)^T R u(t) \right) dt
+</div>
+<script type="math/tex; mode=display">
+J = \int_0^\infty \left( x(t)^T Q x(t) + u(t)^T R u(t) \right) dt
+</script>
+</div>
+<p>where:
+- <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> penalizes bad states.
+- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> penalizes control effort.</p>
+<p>The resulting <strong>optimal feedback gain</strong> <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> satisfies an equation called the <strong>Riccati equation</strong>.</p>
+<h3 id="why-use-lqr">Why use LQR?</h3>
+<ul>
+<li><strong>Energy efficiency</strong>: Control effort is minimized.</li>
+<li><strong>Performance guarantee</strong>: System stabilizes optimally according to a clear cost.</li>
+</ul>
+<blockquote>
+<p><strong>Tip:</strong> LQR uses matrix optimization to find the "best" <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> rather than just "any" <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>.</p>
+</blockquote>
+<hr />
+<h2 id="125-svd-applications-in-control">12.5 SVD Applications in Control</h2>
+<p>The <strong>Singular Value Decomposition (SVD)</strong>, introduced earlier, also plays a powerful role in control theory.</p>
+<p>SVD helps in:
+- Diagnosing poorly controllable or observable directions.
+- Designing <strong>robust controllers</strong> when certain inputs/outputs are weakly connected.
+- Understanding how sensitive a system is to disturbances.</p>
+<h3 id="how-it-fits-in">How it fits in</h3>
+<p>SVD breaks a matrix into "stretching" and "rotating" components — revealing hidden structure. When applying feedback, it helps identify which directions are easy or hard to control.</p>
+<blockquote>
+<p><strong>Example:</strong>
+If an SVD shows a very small singular value, you know there are directions where the system reacts sluggishly — caution is needed in control design.</p>
+</blockquote>
+<hr />
+<h1 id="chapter-12-quiz">Chapter 12 Quiz</h1>
+<h4 id="quiz-feedback-control">Quiz: Feedback Control</h4>
+<p>What is the primary goal of feedback control in a dynamic system?</p>
+<div class="upper-alpha">
+<p>A. Increase computational load<br />
+B. Stabilize the system and improve performance<br />
+C. Make the system uncontrollable<br />
+D. Remove all external inputs</p>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. <strong>Feedback control</strong> modifies the system dynamics to ensure stability, enhance performance, and meet design specifications even in the presence of disturbances or uncertainties.</p>
+</details>
+<hr />
+<h1 id="coming-up-next">✨ Coming Up Next</h1>
+<p>In Chapter 13, we'll extend our control theory knowledge by learning how to <strong>model dynamic systems over time</strong> using matrix exponentiation and <strong>simplify complex systems</strong> without losing essential behavior.</p>
 
 
 
@@ -1554,10 +1608,10 @@ AI will guide students with <strong>scaffolded support</strong> and <strong>inst
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
