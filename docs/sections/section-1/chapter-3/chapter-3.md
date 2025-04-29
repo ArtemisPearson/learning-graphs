@@ -58,19 +58,19 @@ The **span** of a set of vectors is the **smallest subspace** containing them �
 
 **Example:**  
 If you have vectors:
-\[
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-1 \\
+1 \\\\
 0
 \end{bmatrix}
 , \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-0 \\
+0 \\\\
 1
 \end{bmatrix}
-\]
+$$
 in \(\mathbb{R}^2\), then their span is the **entire plane** \(\mathbb{R}^2\).
 
 **Why Span?**  
@@ -85,19 +85,18 @@ A **basis** is a **minimal set of vectors** that:
 - Are **linearly independent** (none of them is redundant).
 
 **Example:**  
-\[
-\left\{
+$$
+\{
 \begin{bmatrix}
-1 \\
+1 \\\\
 0
-\end{bmatrix}
-,
+\end{bmatrix},
 \begin{bmatrix}
-0 \\
+0 \\\\
 1
 \end{bmatrix}
-\right\}
-\]
+\}
+$$
 is a basis for \(\mathbb{R}^2\).
 
 **Dimension:**  
@@ -134,9 +133,9 @@ The space spanned by the **columns** of \(A\).
 ### Null Space (Kernel)
 
 The set of all vectors \(\mathbf{x}\) such that:
-\[
+$$
 A\mathbf{x} = \mathbf{0}
-\]
+$$
 
 - It captures all the **"invisible" directions** — inputs that produce zero output.
 - Tells us about **solutions to homogeneous systems**.
@@ -175,12 +174,14 @@ These ideas create a bridge from basic matrix operations to the beautiful archit
 ---
 
 # 🧠 Quiz
-
-<div class="upper-alpha" markdown>
 Which of the following sets is a subspace of ℝ³?
+<div class="upper-alpha" markdown>
 A. All vectors with \(x + y + z = 1\)
+
 B. All vectors with \(x = y = z\)
+
 C. All vectors with \(x^2 + y^2 + z^2 < 1\)
+
 D. All unit vectors in ℝ³
 </div>
 

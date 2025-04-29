@@ -15,7 +15,7 @@ Imagine trying to describe every possible behavior of a system like a robot arm 
 A **state-space model** expresses a system with two main equations:
 
 $$
-\dot{x}(t) = Ax(t) + Bu(t) \\
+\dot{x}(t) = Ax(t) + Bu(t) \\\\
 y(t) = Cx(t) + Du(t)
 $$
 
@@ -64,7 +64,7 @@ Picture a video game controller. If certain buttons are broken, you might not be
 To test this, use the **Observability Matrix**:
 
 $$
-\mathcal{O} = \begin{bmatrix} C \\ CA \\ CA^2 \\ \vdots \\ CA^{n-1} \end{bmatrix}
+\mathcal{O} = \begin{bmatrix} C \\\\ CA \\\\ CA^2 \\\\ \vdots \\\\ CA^{n-1} \end{bmatrix}
 $$
 
 - If $\mathcal{O}$ has **full rank**, the system is **observable**.

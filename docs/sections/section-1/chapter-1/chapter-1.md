@@ -25,14 +25,14 @@ A **vector** is an **ordered list of numbers**, arranged either horizontally (a 
 
 **Example:**  
 A column vector:
-\[
+$$
 \mathbf{v} =
 \begin{bmatrix}
-2 \\
--1 \\
+2 \\\\
+-1 \\\\
 3
 \end{bmatrix}
-\]
+$$
 
 **Visualizing Vectors:**  
 Imagine a vector as an **arrow** pointing from the origin to a point in space.  
@@ -52,13 +52,13 @@ Vectors **don't have a location**, just a direction and magnitude. Two identical
 A **matrix** is a **rectangular grid** of numbers organized into **rows and columns**.
 
 **Example:**
-\[
+$$
 A =
 \begin{bmatrix}
-1 & 2 & 3 \\
+1 & 2 & 3 \\\\
 4 & 5 & 6
 \end{bmatrix}
-\]
+$$
 This matrix has **2 rows** and **3 columns**, so we say it's a \( 2 \times 3 \) matrix.
 
 **Why matrices?**  
@@ -77,41 +77,41 @@ Think of matrices like **filters**: you feed in an input (vector), and the matri
 A **system of linear equations** is a collection of equations where each term is either a constant or a constant times a variable.
 
 **Example:**
-\[
+$$
 \begin{aligned}
 2x + 3y &= 5 \\
 4x - y &= 1
 \end{aligned}
-\]
+$$
 
 **How do we express this system using matrices?**  
 Let's define:
 - **Matrix of coefficients** \( A \):
-\[
+$$
 \begin{bmatrix}
-2 & 3 \\
+2 & 3 \\\\
 4 & -1
 \end{bmatrix}
-\]
+$$
 - **Vector of variables** \( \mathbf{x} \):
-\[
+$$
 \begin{bmatrix}
-x \\
+x \\\\
 y
 \end{bmatrix}
-\]
+$$
 - **Vector of constants** \( \mathbf{b} \):
-\[
+$$
 \begin{bmatrix}
-5 \\
+5 \\\\
 1
 \end{bmatrix}
-\]
+$$
 
 Then the system becomes:
-\[
+$$
 A\mathbf{x} = \mathbf{b}
-\]
+$$
 
 **Why express it this way?**  
 Because matrices allow us to **efficiently solve** systems — using algorithms like Gaussian elimination or matrix inverses, and they make scaling to large problems possible.
@@ -162,12 +162,14 @@ In this chapter, we learned:
 ---
 
 # 🧠 Quiz
-
-<div class="upper-alpha" markdown>
 Which of the following systems of equations has no solution, and why?
+<div class="upper-alpha" markdown>
 A. A consistent system with full rank
+
 B. A system where the augmented matrix has a pivot in every row
+
 C. A system where two rows of the augmented matrix are contradictory
+
 D. A homogeneous system
 </div>
 

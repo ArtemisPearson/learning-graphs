@@ -36,9 +36,9 @@ Every linear transformation can be represented by a **matrix**.
 Applying a linear transformation is the same as **multiplying** by its associated matrix.
 
 If \( T \) is a linear transformation, there exists a matrix \( A \) such that:
-\[
+$$
 T(\mathbf{x}) = A\mathbf{x}
-\]
+$$
 
 ---
 
@@ -55,9 +55,9 @@ T(\mathbf{x}) = A\mathbf{x}
 ### Kernel (Null Space)
 
 The **kernel** of a transformation \(T\) is the set of vectors sent to zero:
-\[
+$$
 \ker(T) = \{ \mathbf{x} \mid T(\mathbf{x}) = \mathbf{0} \}
-\]
+$$
 
 **Interpretation:**  
 The kernel captures all directions that are "flattened" completely.
@@ -67,9 +67,9 @@ The kernel captures all directions that are "flattened" completely.
 ### Image (Range)
 
 The **image** of a transformation is the set of all possible outputs:
-\[
+$$
 \text{Im}(T) = \{ T(\mathbf{x}) \mid \mathbf{x} \in \mathbb{R}^n \}
-\]
+$$
 
 **Interpretation:**  
 The image tells you where vectors can land — the "reach" of the transformation.
@@ -88,9 +88,9 @@ Two matrices are **similar** if they represent the **same transformation** but i
 
 **Formal Definition:**  
 Matrices \(A\) and \(B\) are similar if:
-\[
+$$
 B = P^{-1}AP
-\]
+$$
 for some invertible matrix \(P\).
 
 ---
@@ -113,9 +113,9 @@ These are **eigenvectors**.
 
 - Given a transformation \(A\),
 - An **eigenvector** \(\mathbf{v}\) satisfies:
-\[
+$$
 A\mathbf{v} = \lambda \mathbf{v}
-\]
+$$
 where \(\lambda\) is a **scalar** called the **eigenvalue**.
 
 ---
@@ -136,9 +136,9 @@ Eigenvectors are the natural "arcs" of linear transformations.
 ### Step 1: Find Eigenvalues
 
 Solve:
-\[
+$$
 \det(A - \lambda I) = 0
-\]
+$$
 This is the **characteristic equation**.
 
 The solutions \(\lambda\) are the **eigenvalues**.
@@ -148,9 +148,9 @@ The solutions \(\lambda\) are the **eigenvalues**.
 ### Step 2: Find Eigenvectors
 
 For each eigenvalue \(\lambda\), solve:
-\[
+$$
 (A - \lambda I)\mathbf{v} = \mathbf{0}
-\]
+$$
 to find eigenvectors.
 
 ---
@@ -158,29 +158,29 @@ to find eigenvectors.
 ### Example
 
 Let:
-\[
+$$
 A =
 \begin{bmatrix}
-4 & 1 \\
+4 & 1 \\\\
 2 & 3
 \end{bmatrix}
-\]
+$$
 
 Find the eigenvalues:
 
 1. Compute \( \det(A - \lambda I) \):
-\[
+$$
 \det
 \begin{bmatrix}
-4-\lambda & 1 \\
+4-\lambda & 1 \\\\
 2 & 3-\lambda
 \end{bmatrix}
 = (4-\lambda)(3-\lambda) - 2
-\]
+$$
 Expand:
-\[
+$$
 = \lambda^2 - 7\lambda + 10
-\]
+$$
 
 2. Solve \( \lambda^2 - 7\lambda + 10 = 0 \).
 
@@ -231,12 +231,15 @@ This chapter prepares you for real-world applications where transformations need
 ---
 
 # 🧠 Quiz
-
-<div class="upper-alpha" markdown>
 What does it mean if a matrix has fewer than \(n\) linearly independent eigenvectors?
+<div class="upper-alpha" markdown>
+
 A. It is not square
+
 B. It cannot be diagonalized
+
 C. It has no eigenvalues
+
 D. Its determinant is zero
 </div>
 

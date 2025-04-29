@@ -31,7 +31,7 @@ A simple graph:
 ```
 Adjacency matrix:
 $$
-A = \begin{bmatrix}0 & 1 & 1 & 0 \\ 1 & 0 & 0 & 1 \\ 1 & 0 & 0 & 1 \\ 0 & 1 & 1 & 0\end{bmatrix}
+A = \begin{bmatrix}0 & 1 & 1 & 0 \\\\ 1 & 0 & 0 & 1 \\\\ 1 & 0 & 0 & 1 \\\\ 0 & 1 & 1 & 0\end{bmatrix}
 $$
 
 ### Incidence Matrix

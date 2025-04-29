@@ -15,13 +15,13 @@ Vectors are **linearly independent** if **none of them can be written as a combi
 
 **Formal Test:**  
 Vectors \( \mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \) are independent if the only solution to:
-\[
+$$
 c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \dots + c_n\mathbf{v}_n = \mathbf{0}
-\]
+$$
 is:
-\[
+$$
 c_1 = c_2 = \dots = c_n = 0
-\]
+$$
 
 **Otherwise**, they are **dependent**.
 
@@ -43,33 +43,33 @@ Imagine you're giving directions:
 
 **Independent Example:**  
 In \(\mathbb{R}^2\),
-\[
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-1 \\
+1 \\\\
 0
 \end{bmatrix}, \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-0 \\
+0 \\\\
 1
 \end{bmatrix}
-\]
+$$
 are independent — they point along different axes.
 
 **Dependent Example:**  
-\[
+$$
 \mathbf{v}_1 =
 \begin{bmatrix}
-2 \\
+2 \\\\
 4
 \end{bmatrix}, \quad
 \mathbf{v}_2 =
 \begin{bmatrix}
-1 \\
+1 \\\\
 2
 \end{bmatrix}
-\]
+$$
 are dependent because \( \mathbf{v}_1 = 2\mathbf{v}_2 \).
 
 ---
@@ -103,23 +103,23 @@ You can find the rank of a matrix by:
 **Example:**
 
 Matrix \(A\):
-\[
+$$
 A =
 \begin{bmatrix}
-1 & 2 & 3 \\
-2 & 4 & 6 \\
+1 & 2 & 3 \\\\
+2 & 4 & 6 \\\\
 3 & 6 & 9
 \end{bmatrix}
-\]
+$$
 
 Row reducing:
-\[
+$$
 \begin{bmatrix}
-1 & 2 & 3 \\
-0 & 0 & 0 \\
+1 & 2 & 3 \\\\
+0 & 0 & 0 \\\\
 0 & 0 & 0
 \end{bmatrix}
-\]
+$$
 
 Thus, \(\text{rank}(A) = 1\).
 
@@ -153,9 +153,9 @@ This elegant theorem relates:
 - **Nullity** (dimension of the null space, i.e., number of free variables).
 
 **Theorem:**
-\[
+$$
 \text{rank}(A) + \text{nullity}(A) = n
-\]
+$$
 where \(n\) = number of columns.
 
 **Meaning:**  
@@ -196,24 +196,28 @@ Mastering rank and independence is essential for unlocking the deeper structure 
 ---
 
 # 🧠 Quiz
+If a \(4 \times 5\) matrix has rank 3, what is the dimension of its null space?
 
 <div class="upper-alpha" markdown>
-If a \(4 \times 5\) matrix has rank 3, what is the dimension of its null space?
+
 A. 1
+
 B. 2
+
 C. 3
+
 D. 5
 </div>
 
 ??? Question "Show Answer"
     The correct answer is **B**.  
     By the Rank-Nullity Theorem:  
-    \[
+    $$
     \text{rank} + \text{nullity} = \text{number of columns}
-    \]
+    $$
     So:  
-    \[
+    $$
     3 + \text{nullity} = 5
     \quad \Rightarrow \quad
     \text{nullity} = 2
-    \]
+    $$

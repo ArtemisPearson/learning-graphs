@@ -52,7 +52,7 @@ Convolution is a way of combining two signals to produce a third. It's crucial i
 ### Toeplitz Matrix Structure
 A Toeplitz matrix has constant diagonals:
 $$
-T = \begin{bmatrix}t_0 & 0 & 0 \\ t_1 & t_0 & 0 \\ t_2 & t_1 & t_0\end{bmatrix}
+T = \begin{bmatrix}t_0 & 0 & 0 \\\\ t_1 & t_0 & 0 \\\\ t_2 & t_1 & t_0\end{bmatrix}
 $$
 
 Multiplying $T$ by a vector $\mathbf{x}$ performs convolution!
@@ -71,13 +71,13 @@ Spatial transformations like **rotation** and **reflection** are elegantly expre
 #### Reflection Across a Line (2D)
 The reflection matrix across a line at angle $\theta$ is:
 $$
-R = \begin{bmatrix}\cos 2\theta & \sin 2\theta\\ \sin 2\theta & -\cos 2\theta\end{bmatrix}
+R = \begin{bmatrix}\cos 2\theta & \sin 2\theta \\\\ \sin 2\theta & -\cos 2\theta\end{bmatrix}
 $$
 
 #### Rotation (2D)
 Rotation by angle $\theta$ counterclockwise:
 $$
-\text{Rotation} = \begin{bmatrix}\cos \theta & -\sin \theta \\ \sin \theta & \cos \theta\end{bmatrix}
+\text{Rotation} = \begin{bmatrix}\cos \theta & -\sin \theta \\\\ \sin \theta & \cos \theta\end{bmatrix}
 $$
 
 #### Extension to 3D
@@ -100,11 +100,11 @@ Given two vectors $\mathbf{u}$ and $\mathbf{v}$ in $\mathbb{R}^3$, the cross pro
 ### Matrix Formulation
 The cross product can be represented as a matrix multiplication:
 $$
-\mathbf{u} \times \mathbf{v} = [\mathbf{u}]_\times \mathbf{v}
+\mathbf{u} \times \mathbf{v} = \mathbf{u} \times \mathbf{v}
 $$
 where $[\mathbf{u}]_\times$ is the **skew-symmetric matrix**:
 $$
-[\mathbf{u}]_\times = \begin{bmatrix}0 & -u_3 & u_2\\ u_3 & 0 & -u_1\\ -u_2 & u_1 & 0\end{bmatrix}
+[\mathbf{u}]_\times = \begin{bmatrix}0 & -u_3 & u_2 \\\\ u_3 & 0 & -u_1 \\\\ -u_2 & u_1 & 0\end{bmatrix}
 $$
 
 This clever trick allows cross products to fit neatly into the world of **linear transformations**.

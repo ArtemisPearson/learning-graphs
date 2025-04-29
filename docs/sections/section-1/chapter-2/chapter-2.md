@@ -12,32 +12,32 @@ Mastering these operations gives you the toolkit to manipulate data structures, 
 Matrices of the **same dimensions** can be **added** or **subtracted** by simply combining their corresponding entries.
 
 **Example:**
-\[
+$$
 A = 
 \begin{bmatrix}
-1 & 2 \\
+1 & 2 \\\\
 3 & 4
 \end{bmatrix}, \quad
 B =
 \begin{bmatrix}
-5 & 6 \\
+5 & 6 \\\\
 7 & 8
 \end{bmatrix}
-\]
+$$
 
 Then:
-\[
+$$
 A + B =
 \begin{bmatrix}
-1+5 & 2+6 \\
+1+5 & 2+6 \\\\
 3+7 & 4+8
 \end{bmatrix}
 =
 \begin{bmatrix}
-6 & 8 \\
+6 & 8 \\\\
 10 & 12
 \end{bmatrix}
-\]
+$$
 
 **Important:**  
 - **Dimensions must match!** You can't add a \(2 \times 3\) matrix to a \(3 \times 2\) matrix.
@@ -52,18 +52,18 @@ When combining two datasets (e.g., overlaying two images or merging network conn
 Multiplying a matrix by a **scalar** means multiplying **every entry** by that scalar.
 
 **Example:**
-\[
+$$
 3A =
 \begin{bmatrix}
-3\times1 & 3\times2 \\
+3\times1 & 3\times2 \\\\
 3\times3 & 3\times4
 \end{bmatrix}
 =
 \begin{bmatrix}
-3 & 6 \\
+3 & 6 \\\\
 9 & 12
 \end{bmatrix}
-\]
+$$
 
 **Analogy:**  
 Imagine **brightening an image**: multiplying every pixel's intensity by 3. Scalar multiplication **scales the entire matrix**.
@@ -82,32 +82,32 @@ To multiply \(A\) (\(m\times n\)) by \(B\) (\(n\times p\)):
 Each entry in the product matrix is the **dot product** of a row of \(A\) and a column of \(B\).
 
 **Example:**
-\[
+$$
 A =
 \begin{bmatrix}
-1 & 2 \\
+1 & 2 \\\\
 3 & 4
 \end{bmatrix}, \quad
 B =
 \begin{bmatrix}
-5 & 6 \\
+5 & 6 \\\\
 7 & 8
 \end{bmatrix}
-\]
+$$
 
 Compute:
-\[
+$$
 AB =
 \begin{bmatrix}
-(1)(5)+(2)(7) & (1)(6)+(2)(8) \\
+(1)(5)+(2)(7) & (1)(6)+(2)(8) \\\\
 (3)(5)+(4)(7) & (3)(6)+(4)(8)
 \end{bmatrix}
 =
 \begin{bmatrix}
-19 & 22 \\
+19 & 22 \\\\
 43 & 50
 \end{bmatrix}
-\]
+$$
 
 **Key Observations:**
 - **Matrix multiplication is not commutative**: \( AB \neq BA \) generally.
@@ -124,20 +124,20 @@ Think of matrices as **machines**: passing a vector through matrix \(A\) and the
 The **transpose** of a matrix \(A\), denoted \(A^T\), is created by flipping rows into columns.
 
 **Example:**
-\[
+$$
 A =
 \begin{bmatrix}
-1 & 2 & 3 \\
+1 & 2 & 3 \\\\
 4 & 5 & 6
 \end{bmatrix}
 \quad \Rightarrow \quad
 A^T =
 \begin{bmatrix}
-1 & 4 \\
-2 & 5 \\
+1 & 4 \\\\
+2 & 5 \\\\
 3 & 6
 \end{bmatrix}
-\]
+$$
 
 **Why Transpose?**  
 - It rearranges information.
@@ -157,14 +157,14 @@ Certain matrices are particularly important because of their simplicity and prop
 An identity matrix acts like the number 1 in multiplication.
 
 **Example:**
-\[
+$$
 I_3 =
 \begin{bmatrix}
-1 & 0 & 0 \\
-0 & 1 & 0 \\
+1 & 0 & 0 \\\\
+0 & 1 & 0 \\\\
 0 & 0 & 1
 \end{bmatrix}
-\]
+$$
 
 **Properties:**
 - \(AI = IA = A\) for any compatible matrix \(A\).
@@ -175,8 +175,12 @@ I_3 =
 ### Zero Matrix
 
 All entries are 0. It's the additive identity:
-- \(A + 0 = A\)
-- \(A - 0 = A\)
+$$
+(A + 0 = A)
+$$
+$$
+(A - 0 = A)
+$$
 
 ---
 
@@ -185,14 +189,14 @@ All entries are 0. It's the additive identity:
 Only nonzero entries are on the main diagonal.
 
 **Example:**
-\[
+$$
 D =
 \begin{bmatrix}
-2 & 0 & 0 \\
-0 & 5 & 0 \\
+2 & 0 & 0 \\\\
+0 & 5 & 0 \\\\
 0 & 0 & 7
 \end{bmatrix}
-\]
+$$
 
 **Why Important?**  
 Diagonal matrices are incredibly easy to compute with:
@@ -204,17 +208,17 @@ Diagonal matrices are incredibly easy to compute with:
 ### Symmetric Matrix
 
 A matrix \(A\) is **symmetric** if:
-\[
+$$
 A^T = A
-\]
+$$
 
 **Example:**
-\[
+$$
 \begin{bmatrix}
-1 & 3 \\
+1 & 3 \\\\
 3 & 2
 \end{bmatrix}
-\]
+$$
 
 Symmetric matrices arise naturally when modeling undirected relationships (like undirected graphs).
 
@@ -235,12 +239,12 @@ Critical for simplifying solving systems (e.g., in LU decomposition).
 Sometimes matrices are better thought of as **blocks** of smaller matrices.
 
 **Example:**
-\[
+$$
 \begin{bmatrix}
-A & B \\
+A & B \\\\
 C & D
 \end{bmatrix}
-\]
+$$
 
 where \(A, B, C, D\) themselves are matrices.
 
@@ -263,12 +267,16 @@ These operations are the essential "verbs" of linear algebra — they let us *sp
 ---
 
 # 🧠 Quiz
+Which property does matrix multiplication NOT generally satisfy?
 
 <div class="upper-alpha" markdown>
-Which property does matrix multiplication NOT generally satisfy?
+
 A. Associativity
+
 B. Distributivity over addition
+
 C. Commutativity
+
 D. Compatibility with scalar multiplication
 </div>
 

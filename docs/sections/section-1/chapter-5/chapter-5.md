@@ -15,33 +15,33 @@ The **inner product** (also called the **dot product**) gives a way to "multiply
 ### Definition
 
 For two vectors \(\mathbf{u}, \mathbf{v} \in \mathbb{R}^n\),
-\[
+$$
 \mathbf{u} \cdot \mathbf{v} = u_1v_1 + u_2v_2 + \cdots + u_nv_n
-\]
+$$
 
 **Example:**
-\[
+$$
 \mathbf{u} =
 \begin{bmatrix}
-1 \\ 2 \\ 3
+1 \\\\ 2 \\\\ 3
 \end{bmatrix},
 \quad
 \mathbf{v} =
 \begin{bmatrix}
-4 \\ 5 \\ 6
+4 \\\\ 5 \\\\ 6
 \end{bmatrix}
 \quad \Rightarrow \quad
 \mathbf{u} \cdot \mathbf{v} = 1\cdot4 + 2\cdot5 + 3\cdot6 = 32
-\]
+$$
 
 ---
 
 ### Geometric Interpretation
 
 The inner product relates to the **angle** \(\theta\) between vectors:
-\[
+$$
 \mathbf{u} \cdot \mathbf{v} = \|\mathbf{u}\| \|\mathbf{v}\| \cos\theta
-\]
+$$
 
 Thus:
 - If \(\cos\theta > 0\), the vectors point generally **in the same direction**.
@@ -60,14 +60,14 @@ Using the inner product, we can define a **norm**, which measures the **length**
 ### Norm (Length)
 
 The norm of \(\mathbf{v}\) is:
-\[
+$$
 \|\mathbf{v}\| = \sqrt{\mathbf{v} \cdot \mathbf{v}}
-\]
+$$
 
 **Example:**
-\[
+$$
 \|\mathbf{v}\| = \sqrt{4^2 + 5^2 + 6^2} = \sqrt{77}
-\]
+$$
 
 **Why Norms Matter:**  
 Norms allow us to measure **how big** a vector is — crucial for computing distances, speeds, and energy.
@@ -77,9 +77,9 @@ Norms allow us to measure **how big** a vector is — crucial for computing dist
 ### Distance Between Vectors
 
 The distance between \(\mathbf{u}\) and \(\mathbf{v}\) is:
-\[
+$$
 \|\mathbf{u} - \mathbf{v}\|
-\]
+$$
 
 It's simply the length of the vector from \(\mathbf{u}\) to \(\mathbf{v}\).
 
@@ -92,9 +92,9 @@ It's simply the length of the vector from \(\mathbf{u}\) to \(\mathbf{v}\).
 ## 5.3 Orthogonality
 
 Two vectors are **orthogonal** if:
-\[
+$$
 \mathbf{u} \cdot \mathbf{v} = 0
-\]
+$$
 
 **Geometric Meaning:**  
 They meet at a **90° angle** — they are **completely independent** directionally.
@@ -116,9 +116,9 @@ Sometimes, we want to **project** a vector onto another vector (or subspace).
 ### Projecting onto a Vector
 
 Given a vector \(\mathbf{v}\) and a unit vector \(\mathbf{u}\), the projection of \(\mathbf{v}\) onto \(\mathbf{u}\) is:
-\[
+$$
 \text{proj}_{\mathbf{u}}(\mathbf{v}) = (\mathbf{v} \cdot \mathbf{u}) \mathbf{u}
-\]
+$$
 
 **Creative Picture:**  
 Imagine shining a flashlight directly onto \(\mathbf{u}\) — the "shadow" of \(\mathbf{v}\) on \(\mathbf{u}\) is the projection.
@@ -129,9 +129,9 @@ Imagine shining a flashlight directly onto \(\mathbf{u}\) — the "shadow" of \(
 
 Project \(\mathbf{v} = [3, 4]\) onto \(\mathbf{u} = [1, 0]\) (already a unit vector):
 
-\[
+$$
 \text{proj}_{\mathbf{u}}(\mathbf{v}) = (3\cdot1 + 4\cdot0) \times [1,0] = 3 [1,0] = [3,0]
-\]
+$$
 
 ---
 
@@ -157,16 +157,14 @@ A set of vectors is **orthonormal** if:
 - Vectors are **mutually orthogonal**.
 
 **Example:**
-\[
-\left\{
+$$
 \begin{bmatrix}
-1 \\ 0
+1 \\\\ 0
 \end{bmatrix},
 \begin{bmatrix}
-0 \\ 1
+0 \\\\ 1
 \end{bmatrix}
-\right\}
-\]
+$$
 is an orthonormal basis for \(\mathbb{R}^2\).
 
 ---
@@ -208,12 +206,15 @@ This geometric language makes linear algebra a powerful tool for **modeling, opt
 ---
 
 # 🧠 Quiz
-
-<div class="upper-alpha" markdown>
 What is the result of projecting vector \( \mathbf{b} \) onto a unit vector \( \mathbf{u} \)?
+<div class="upper-alpha" markdown>
+
 A. \( \mathbf{b} \cdot \mathbf{u} \)
+
 B. \( (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} \)
+
 C. \( \mathbf{u} \cdot \mathbf{u} \)
+
 D. \( \mathbf{b} \cdot \mathbf{b} \)
 </div>
 
