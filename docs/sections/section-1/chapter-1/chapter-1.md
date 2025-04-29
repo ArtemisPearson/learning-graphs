@@ -165,10 +165,10 @@ In this chapter, we learned:
 
 <div class="upper-alpha" markdown>
 Which of the following systems of equations has no solution, and why?
-1. A consistent system with full rank
-2. A system where the augmented matrix has a pivot in every row
-3. A system where two rows of the augmented matrix are contradictory
-4. A homogeneous system
+A. A consistent system with full rank
+B. A system where the augmented matrix has a pivot in every row
+C. A system where two rows of the augmented matrix are contradictory
+D. A homogeneous system
 </div>
 
 ??? Question "Show Answer"

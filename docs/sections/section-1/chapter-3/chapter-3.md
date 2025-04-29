@@ -178,10 +178,10 @@ These ideas create a bridge from basic matrix operations to the beautiful archit
 
 <div class="upper-alpha" markdown>
 Which of the following sets is a subspace of ℝ³?
-1. All vectors with \(x + y + z = 1\)
-2. All vectors with \(x = y = z\)
-3. All vectors with \(x^2 + y^2 + z^2 < 1\)
-4. All unit vectors in ℝ³
+A. All vectors with \(x + y + z = 1\)
+B. All vectors with \(x = y = z\)
+C. All vectors with \(x^2 + y^2 + z^2 < 1\)
+D. All unit vectors in ℝ³
 </div>
 
 ??? Question "Show Answer"

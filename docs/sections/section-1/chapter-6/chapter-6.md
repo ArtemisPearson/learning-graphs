@@ -234,10 +234,10 @@ This chapter prepares you for real-world applications where transformations need
 
 <div class="upper-alpha" markdown>
 What does it mean if a matrix has fewer than \(n\) linearly independent eigenvectors?
-1. It is not square
-2. It cannot be diagonalized
-3. It has no eigenvalues
-4. Its determinant is zero
+A. It is not square
+B. It cannot be diagonalized
+C. It has no eigenvalues
+D. Its determinant is zero
 </div>
 
 ??? Question "Show Answer"

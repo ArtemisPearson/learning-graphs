@@ -199,10 +199,10 @@ Mastering rank and independence is essential for unlocking the deeper structure 
 
 <div class="upper-alpha" markdown>
 If a \(4 \times 5\) matrix has rank 3, what is the dimension of its null space?
-1. 1
-2. 2
-3. 3
-4. 5
+A. 1
+B. 2
+C. 3
+D. 5
 </div>
 
 ??? Question "Show Answer"

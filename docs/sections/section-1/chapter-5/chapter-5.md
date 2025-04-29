@@ -211,10 +211,10 @@ This geometric language makes linear algebra a powerful tool for **modeling, opt
 
 <div class="upper-alpha" markdown>
 What is the result of projecting vector \( \mathbf{b} \) onto a unit vector \( \mathbf{u} \)?
-1. \( \mathbf{b} \cdot \mathbf{u} \)
-2. \( (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} \)
-3. \( \mathbf{u} \cdot \mathbf{u} \)
-4. \( \mathbf{b} \cdot \mathbf{b} \)
+A. \( \mathbf{b} \cdot \mathbf{u} \)
+B. \( (\mathbf{b} \cdot \mathbf{u}) \mathbf{u} \)
+C. \( \mathbf{u} \cdot \mathbf{u} \)
+D. \( \mathbf{b} \cdot \mathbf{b} \)
 </div>
 
 ??? Question "Show Answer"

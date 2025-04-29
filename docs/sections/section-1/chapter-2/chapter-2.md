@@ -266,10 +266,10 @@ These operations are the essential "verbs" of linear algebra — they let us *sp
 
 <div class="upper-alpha" markdown>
 Which property does matrix multiplication NOT generally satisfy?
-1. Associativity
-2. Distributivity over addition
-3. Commutativity
-4. Compatibility with scalar multiplication
+A. Associativity
+B. Distributivity over addition
+C. Commutativity
+D. Compatibility with scalar multiplication
 </div>
 
 ??? Question "Show Answer"

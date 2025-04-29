@@ -1,7 +1,12 @@
 markdown_extensions:
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex
 extra_css:
   - css/extra.css
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
 site_name: Intelligent Textbook for Applied Linear Algebra
 repo_url: https://github.com/ArtemisPearson/learning-graphs
 nav:
