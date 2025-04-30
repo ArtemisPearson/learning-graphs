@@ -1,4 +1,4 @@
-# **Course Title: Applied Linear Algebra for Computer Science and Electrical Engineering**
+# **Applied Linear Algebra for Computer Science and Electrical Engineering**
 
 **Course Description**
 

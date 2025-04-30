@@ -5,17 +5,17 @@ This section highlights the powerful role of linear algebra in signal processing
 
 ---
 
-## **Chapter 14: Fourier and Cosine Transforms**
+## **[Chapter 14: Fourier and Cosine Transforms](chapter-14/chapter-14.md)**
 - **Key Concepts**: Fourier Transform and matrices, Discrete Cosine Transform (DCT), Fast Fourier Transform (FFT) matrix view.
 - **Focus**: Understand how linear transformations encode frequency information and enable efficient signal processing.
 - **Skills**: Apply matrix representations of Fourier techniques to analyze signals, compress data, and perform transformations in both time and frequency domains.
 
-## **Chapter 15: Graph Theory and Linear Algebra**
+## **[Chapter 15: Graph Theory and Linear Algebra](chapter-15/chapter-15.md)**
 - **Key Concepts**: Graph adjacency matrices, incidence matrices, graph Laplacian matrices, spectral clustering.
 - **Focus**: Represent and study graphs using matrices; apply linear algebraic techniques to understand network structure and clustering.
 - **Skills**: Model complex networks, compute graph partitions, and explore eigenvalue-based methods for network analysis.
 
-## **Chapter 16: Applications in Networks and Flows**
+## **[Chapter 16: Applications in Networks and Flows](chapter-16/chapter-16.md)**
 - **Key Concepts**: Network flow problems, convolution as matrix multiplication, projections onto subspaces, reflection and rotation matrices (2D and 3D), cross product operations.
 - **Focus**: Apply matrix techniques to dynamic systems, network flow optimization, and geometric transformations.
 - **Skills**: Solve flow optimization problems, perform signal convolutions, and execute spatial transformations crucial for graphics, physics, and control.
